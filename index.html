@@ -9,7 +9,7 @@
     --bg:#0d0e11; --surface:#16181d; --surface2:#1d2026; --line:#2a2e36;
     --text:#ece9e2; --muted:#9b9a93; --gold:#d4a04a; --red:#b22234;
     --teal:#1d9e75; --amber:#ef9f27;
-    --radius:14px; --maxw:1080px;
+    --radius:14px; --maxw:980px;
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
@@ -29,26 +29,23 @@
   .seclabel{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 20px;flex-wrap:wrap}
   h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0}
   .h2note{color:var(--muted);font-size:14px}
-  .grid{display:grid;gap:14px}
-  .g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-  .g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
-  .mod{display:flex;flex-direction:column;min-height:118px}
+  .module{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin-bottom:14px}
+  .mhead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
   .num{color:var(--gold);font-size:13px;font-weight:600}
-  .card h3{font-size:17px;font-weight:600;margin:4px 0 5px}
-  .card p{color:var(--muted);font-size:14px;margin:0}
-  .badge{align-self:flex-start;font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;margin-top:auto;letter-spacing:.02em}
-  .mod p{margin-bottom:12px}
+  .module h3{font-size:19px;font-weight:600;margin:0}
+  .module .desc{color:var(--muted);font-size:14px;margin:6px 0 0}
+  .badge{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;letter-spacing:.02em}
   .b-done{background:rgba(29,158,117,.16);color:#5dcaa5}
   .b-prog{background:rgba(239,159,39,.16);color:#fac775}
   .b-next{background:rgba(155,154,147,.14);color:var(--muted)}
-  .loopnote{color:var(--muted);font-size:14px;margin:16px 0 0;display:flex;gap:8px;align-items:flex-start}
-  .layer{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-bottom:10px}
-  .layer .ltag{color:var(--gold);font-weight:600;min-width:42px}
-  .layer b{font-size:15px}
-  .layer p{color:var(--muted);font-size:14px;margin:2px 0 0}
-  .truth{background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:14px 18px;color:var(--muted);font-size:14px;margin-top:6px}
-  .legend{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:13px;margin-top:16px}
+  .nest{margin:16px 0 2px;padding-left:16px;border-left:2px solid var(--line)}
+  .nestlabel{color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 10px}
+  .subgrid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+  .sub-it{background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+  .sub-it b{font-size:14px;font-weight:600;display:block}
+  .sub-it span{color:var(--muted);font-size:13px}
+  .loopnote{color:var(--muted);font-size:13px;margin:12px 0 0}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:13px;margin-top:18px}
   .legend span{display:flex;align-items:center;gap:7px}
   .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
   footer{padding:42px 0 76px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
@@ -60,55 +57,82 @@
   <header>
     <p class="brand">noise <span class="arw">&rarr;</span> signal</p>
     <h1>Noise 2 <span class="s">Signal</span></h1>
-    <p class="sub">The full architecture. Everything we have built, from inception, in one place. From scattered noise to a single clean signal: a system that actually runs, and that anyone can stand up the same way.</p>
+    <p class="sub">The full architecture. Everything we have built, from inception, layered into one curriculum. From scattered noise to a single clean signal: a system that actually runs, and that anyone can stand up the same way.</p>
     <div class="stats">
-      <div class="stat"><b>8</b><span>modules</span></div>
+      <div class="stat"><b>7</b><span>modules</span></div>
       <div class="stat"><b>8</b><span>seats in the engine</span></div>
-      <div class="stat"><b>L1–L3</b><span>memory architecture</span></div>
+      <div class="stat"><b>L1–L3</b><span>memory layers</span></div>
       <div class="stat"><b>2</b><span>modules shipped</span></div>
     </div>
   </header>
 
   <section>
-    <div class="seclabel"><h2>The curriculum</h2><span class="h2note">the whole architecture, foundation up</span></div>
-    <div class="grid g4">
-      <div class="card mod"><span class="num">01</span><h3>Foundation</h3><p>environment, folders, git, the data architecture and Master/Copy/Cache</p><span class="badge b-done">shipped</span></div>
-      <div class="card mod"><span class="num">02</span><h3>Power features</h3><p>skills, MCP servers, subagents, hooks, plan mode</p><span class="badge b-next">to build</span></div>
-      <div class="card mod"><span class="num">03</span><h3>Memory</h3><p>the three-level memory, soul to archive</p><span class="badge b-prog">in progress</span></div>
-      <div class="card mod"><span class="num">04</span><h3>The engine</h3><p>the eight-seat content loop, signal in to posts out</p><span class="badge b-prog">in progress</span></div>
-      <div class="card mod"><span class="num">05</span><h3>Build anything</h3><p>research and production, agentic workflows</p><span class="badge b-next">to build</span></div>
-      <div class="card mod"><span class="num">06</span><h3>Design</h3><p>the visual system, hostable pages, this map</p><span class="badge b-done">shipped</span></div>
-      <div class="card mod"><span class="num">07</span><h3>Compliance</h3><p>backups, data safety, the fact-gate, recovery</p><span class="badge b-next">to build</span></div>
-      <div class="card mod"><span class="num">08</span><h3>Productize</h3><p>package the whole system so it installs anywhere</p><span class="badge b-next">to build</span></div>
+    <div class="seclabel"><h2>The curriculum</h2><span class="h2note">foundation up, layered</span></div>
+
+    <div class="module">
+      <div class="mhead"><span class="num">01</span><h3>Foundation</h3><span class="badge b-done">shipped</span></div>
+      <p class="desc">environment, folders, git, the data architecture and Master/Copy/Cache. The base everything else sits on.</p>
+      <div class="nest">
+        <p class="nestlabel">the foundation underneath</p>
+        <div class="subgrid">
+          <div class="sub-it"><b>L1 · soul</b><span>who am I</span></div>
+          <div class="sub-it"><b>L2 · project</b><span>what am I doing / the business</span></div>
+          <div class="sub-it"><b>L3 · archive</b><span>git master + cloud</span></div>
+          <div class="sub-it"><b>storage truth</b><span>Master / Copy / Cache</span></div>
+        </div>
+        <p class="loopnote">The rule that anchors it: your outcome should never depend on chat history.</p>
+      </div>
     </div>
+
+    <div class="module">
+      <div class="mhead"><span class="num">02</span><h3>Power features</h3><span class="badge b-next">to build</span></div>
+      <p class="desc">skills, MCP servers, subagents, hooks, plan mode. The moving parts that give the system leverage.</p>
+    </div>
+
+    <div class="module">
+      <div class="mhead"><span class="num">03</span><h3>Memory</h3><span class="badge b-prog">in progress</span></div>
+      <p class="desc">the three-level memory system that keeps the foundation's layers alive over time, soul to archive.</p>
+    </div>
+
+    <div class="module">
+      <div class="mhead"><span class="num">04</span><h3>Build</h3><span class="badge b-prog">in progress</span></div>
+      <p class="desc">where the system makes things. The content engine lives here as a subset.</p>
+      <div class="nest">
+        <p class="nestlabel">subset · the content engine</p>
+        <div class="subgrid">
+          <div class="sub-it"><b>01 discover</b><span>what to post</span></div>
+          <div class="sub-it"><b>02 source</b><span>vetted set</span></div>
+          <div class="sub-it"><b>03 research</b><span>go deep, verify</span></div>
+          <div class="sub-it"><b>04 ideate</b><span>ideas to pillars</span></div>
+          <div class="sub-it"><b>05 produce</b><span>write + build</span></div>
+          <div class="sub-it"><b>06 check</b><span>fact-gate</span></div>
+          <div class="sub-it"><b>07 distribute</b><span>schedule + post</span></div>
+          <div class="sub-it"><b>08 learn</b><span>score, feed back</span></div>
+        </div>
+        <p class="loopnote">↺ Learn feeds back to Discover. Skip it and the flywheel becomes a one-way pipe.</p>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="mhead"><span class="num">05</span><h3>Design</h3><span class="badge b-done">shipped</span></div>
+      <p class="desc">the visual system, hostable pages, this map. How the work gets seen.</p>
+    </div>
+
+    <div class="module">
+      <div class="mhead"><span class="num">06</span><h3>Compliance</h3><span class="badge b-next">to build</span></div>
+      <p class="desc">backups, data safety, the fact-gate, the recovery runbook. The unsexy layer that keeps it alive.</p>
+    </div>
+
+    <div class="module">
+      <div class="mhead"><span class="num">07</span><h3>Productize</h3><span class="badge b-next">to build</span></div>
+      <p class="desc">package the whole system so it installs anywhere, the same way, every time.</p>
+    </div>
+
     <div class="legend">
       <span><span class="dot" style="background:var(--teal)"></span>shipped</span>
       <span><span class="dot" style="background:var(--amber)"></span>in progress</span>
       <span><span class="dot" style="background:var(--muted)"></span>to build</span>
     </div>
-  </section>
-
-  <section>
-    <div class="seclabel"><h2>Module 04 · the engine</h2><span class="h2note">signal in, posts out, results feed back</span></div>
-    <div class="grid g4">
-      <div class="card"><span class="num">01</span><h3>Discover</h3><p>what is worth posting this week</p></div>
-      <div class="card"><span class="num">02</span><h3>Source</h3><p>the vetted set everyone cites</p></div>
-      <div class="card"><span class="num">03</span><h3>Research / verify</h3><p>go deep, kill fabricated claims</p></div>
-      <div class="card"><span class="num">04</span><h3>Ideate</h3><p>signal into ideas mapped to pillars</p></div>
-      <div class="card"><span class="num">05</span><h3>Produce</h3><p>write the copy, build the visual</p></div>
-      <div class="card"><span class="num">06</span><h3>Check</h3><p>fact-gate before anything ships</p></div>
-      <div class="card"><span class="num">07</span><h3>Distribute</h3><p>schedule, post, housekeeping</p></div>
-      <div class="card"><span class="num">08</span><h3>Learn</h3><p>score winners, feed back to discover</p></div>
-    </div>
-    <p class="loopnote">↺ Learn feeds back into Discover. The seat most teams skip. Skip it and the flywheel becomes a one-way pipe.</p>
-  </section>
-
-  <section>
-    <div class="seclabel"><h2>The foundation underneath</h2><span class="h2note">three-level memory on a storage truth</span></div>
-    <div class="layer"><span class="ltag">L1</span><div><b>Soul — who am I</b><p>A tight operating manual: the always-on identity plus the reference corpus it points to.</p></div></div>
-    <div class="layer"><span class="ltag">L2</span><div><b>Project — what am I doing</b><p>Each area gets its own claude.md plus a memory/ folder.</p></div></div>
-    <div class="layer"><span class="ltag">L3</span><div><b>Long-term archive</b><p>Git as the master, plus cloud cold storage.</p></div></div>
-    <div class="truth"><b style="color:var(--text)">Storage truth (Master / Copy / Cache):</b> Git = master · local = working copy · databases = cache or system of record · cloud = cold archive. The rule that anchors all of it: your outcome should never depend on chat history.</div>
   </section>
 
   <footer>
