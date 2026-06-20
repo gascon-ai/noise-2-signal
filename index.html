@@ -16,11 +16,12 @@
   body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
   header{padding:74px 0 30px}
-  .brand{display:flex;align-items:center;gap:10px;color:var(--gold);font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 16px}
-  .brand .arw{color:var(--muted)}
+  .brand{color:var(--gold);font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 16px}
   h1{font-size:46px;font-weight:600;margin:0 0 12px;letter-spacing:-.02em}
   h1 .s{color:var(--gold)}
-  .sub{color:var(--muted);font-size:19px;margin:0 0 28px;max-width:700px}
+  .sub{color:var(--muted);font-size:19px;margin:0 0 14px;max-width:710px}
+  .who{color:var(--muted);font-size:15px;margin:0 0 26px;max-width:680px}
+  .who b{color:var(--text);font-weight:500}
   .stats{display:flex;gap:14px;flex-wrap:wrap}
   .stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:12px 18px}
   .stat b{font-size:22px;font-weight:600;display:block}
@@ -38,7 +39,9 @@
   .b-done{background:rgba(29,158,117,.16);color:#5dcaa5}
   .b-prog{background:rgba(239,159,39,.16);color:#fac775}
   .b-next{background:rgba(155,154,147,.14);color:var(--muted)}
-  .lessons{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-left:16px;border-left:2px solid var(--line)}
+  .part{margin-top:14px;padding-left:16px;border-left:2px solid var(--line)}
+  .partlabel{color:var(--muted);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px}
+  .lessons{display:flex;flex-wrap:wrap;gap:8px}
   .lz{background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;color:var(--text)}
   .lz .i{color:var(--gold);font-size:11px;margin-right:5px}
   .loopnote{color:var(--muted);font-size:13px;margin:12px 0 0;padding-left:16px}
@@ -47,7 +50,6 @@
   .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
   .tmpl{background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;color:var(--muted);font-size:14px}
   .tmpl b{color:var(--text)}
-  .src{display:flex;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:13px;margin-top:6px}
   footer{padding:42px 0 76px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
 </style>
 </head>
@@ -58,11 +60,12 @@
     <p class="brand">working title to come</p>
     <h1>The operating system for your <span class="s">business and life</span></h1>
     <p class="sub">Accelerated by AI, designed by you. You teach it who you are and what you do, hand it the work you keep doing by hand, and it learns to run it back better every time. One system you own, built one block at a time.</p>
+    <p class="who">For business owners with <b>a million tabs open in their head</b>. You use AI but it almost makes it worse, more threads, more tabs, more places to lose things. This builds your <b>second brain</b> first, then the engines that run on top of it.</p>
     <div class="stats">
-      <div class="stat"><b>11</b><span>modules</span></div>
+      <div class="stat"><b>10</b><span>modules</span></div>
       <div class="stat"><b>8</b><span>seats in the engine</span></div>
       <div class="stat"><b>L1–L3</b><span>memory layers</span></div>
-      <div class="stat"><b>2</b><span>modules shipped</span></div>
+      <div class="stat"><b>2</b><span>shipped</span></div>
     </div>
   </header>
 
@@ -76,91 +79,72 @@
 
     <div class="module">
       <div class="mhead"><span class="num">00</span><h3>Start here</h3><span class="badge b-prog">next up</span></div>
-      <p class="desc">the map and the roadmap. how it all fits and how to move through it.</p>
-      <div class="lessons">
-        <span class="lz">the map</span><span class="lz">your roadmap</span><span class="lz">how to navigate</span><span class="lz">the lesson template</span>
+      <p class="desc">the map, the roadmap, and the one rule. get your bearings, then build.</p>
+      <div class="part"><div class="lessons"><span class="lz">the map</span><span class="lz">your roadmap</span><span class="lz">how to navigate</span><span class="lz">the one rule</span></div></div>
+    </div>
+
+    <div class="module">
+      <div class="mhead"><span class="num">01</span><h3>Foundation</h3><span class="badge b-prog">in progress</span></div>
+      <p class="desc">set up your home base, then build the core of your second brain. getting clear is the unlock, and it lives here.</p>
+      <div class="part">
+        <p class="partlabel">part A · home base &nbsp;<span style="color:var(--teal)">shipped</span></p>
+        <div class="lessons"><span class="lz">install + surfaces</span><span class="lz">permissions + slash commands</span><span class="lz">file system + folders</span><span class="lz">git + GitHub</span><span class="lz">CLAUDE.md + plan mode</span><span class="lz">data architecture (Master/Copy/Cache)</span></div>
+      </div>
+      <div class="part">
+        <p class="partlabel">part B · your second brain &nbsp;<span style="color:var(--amber)">in progress</span></p>
+        <div class="lessons"><span class="lz">the Who-Am-I interview</span><span class="lz">who you are</span><span class="lz">your business</span><span class="lz">brand voice</span><span class="lz">train AI on your business</span></div>
       </div>
     </div>
 
     <div class="module">
-      <div class="mhead"><span class="num">01</span><h3>Foundation + setup</h3><span class="badge b-done">shipped</span></div>
-      <p class="desc">the base everything sits on.</p>
-      <div class="lessons">
-        <span class="lz">install + surfaces</span><span class="lz">permissions + slash commands</span><span class="lz">file system + folders</span><span class="lz">git + GitHub</span><span class="lz">CLAUDE.md + plan mode</span><span class="lz">data architecture (Master/Copy/Cache)</span>
+      <div class="mhead"><span class="num">02</span><h3>Power features</h3><span class="badge b-next">to build</span></div>
+      <p class="desc">give your second brain tools so it can do real work.</p>
+      <div class="part"><div class="lessons"><span class="lz">skills</span><span class="lz">MCP + connect your tools</span><span class="lz">subagents</span><span class="lz">hooks</span><span class="lz">agents (AI employees)</span><span class="lz">command library</span></div></div>
+    </div>
+
+    <div class="module">
+      <div class="mhead"><span class="num">03</span><h3>Memory</h3><span class="badge b-next">to build</span></div>
+      <p class="desc">keep the knowledge alive and compounding over time.</p>
+      <div class="part"><div class="lessons"><span class="lz">L1 soul</span><span class="lz">L2 project</span><span class="lz">L3 archive</span><span class="lz">it learns and compounds</span></div></div>
+    </div>
+
+    <div class="module">
+      <div class="mhead"><span class="num">04</span><h3>The content engine</h3><span class="badge b-prog">in progress</span></div>
+      <p class="desc">your first engine, built as one closed loop.</p>
+      <div class="part">
+        <div class="lessons"><span class="lz"><span class="i">01</span>discover</span><span class="lz"><span class="i">02</span>source</span><span class="lz"><span class="i">03</span>research / verify</span><span class="lz"><span class="i">04</span>ideate</span><span class="lz"><span class="i">05</span>produce</span><span class="lz"><span class="i">06</span>check</span><span class="lz"><span class="i">07</span>distribute</span><span class="lz"><span class="i">08</span>learn</span></div>
+        <p class="loopnote">backed by: Supabase database, IG scraper, content analysis, hook database, competitor tracking. ↺ Learn feeds back to Discover.</p>
       </div>
     </div>
 
     <div class="module">
-      <div class="mhead"><span class="num">02</span><h3>Identity</h3><span class="badge b-prog">in progress</span></div>
-      <p class="desc">who you are, and your business, taught to the system. includes brand voice.</p>
-      <div class="lessons">
-        <span class="lz">the Who-Am-I interview</span><span class="lz">soul · who you are</span><span class="lz">project · the business</span><span class="lz">brand voice</span><span class="lz">custom instructions</span><span class="lz">train AI on your business</span>
-      </div>
-    </div>
-
-    <div class="module">
-      <div class="mhead"><span class="num">03</span><h3>Power features</h3><span class="badge b-next">to build</span></div>
-      <p class="desc">the moving parts that give the system leverage.</p>
-      <div class="lessons">
-        <span class="lz">skills</span><span class="lz">MCP + connect your tools</span><span class="lz">subagents</span><span class="lz">hooks</span><span class="lz">agents (AI employees)</span><span class="lz">command library</span>
-      </div>
-    </div>
-
-    <div class="module">
-      <div class="mhead"><span class="num">04</span><h3>Memory</h3><span class="badge b-next">to build</span></div>
-      <p class="desc">keep the system's knowledge alive over time.</p>
-      <div class="lessons">
-        <span class="lz">L1 soul</span><span class="lz">L2 project</span><span class="lz">L3 archive</span><span class="lz">never depend on chat history</span>
-      </div>
-    </div>
-
-    <div class="module">
-      <div class="mhead"><span class="num">05</span><h3>The content engine</h3><span class="badge b-prog">in progress</span></div>
-      <p class="desc">the end-to-end content system, built as one closed loop.</p>
-      <div class="lessons">
-        <span class="lz"><span class="i">01</span>discover</span><span class="lz"><span class="i">02</span>source</span><span class="lz"><span class="i">03</span>research / verify</span><span class="lz"><span class="i">04</span>ideate</span><span class="lz"><span class="i">05</span>produce</span><span class="lz"><span class="i">06</span>check</span><span class="lz"><span class="i">07</span>distribute</span><span class="lz"><span class="i">08</span>learn</span>
-      </div>
-      <p class="loopnote">backed by: Supabase database, IG scraper, content analysis, hook database, competitor tracking. ↺ Learn feeds back to Discover.</p>
-    </div>
-
-    <div class="module">
-      <div class="mhead"><span class="num">06</span><h3>Build anything</h3><span class="badge b-next">to build</span></div>
+      <div class="mhead"><span class="num">05</span><h3>Build anything</h3><span class="badge b-next">to build</span></div>
       <p class="desc">where the system makes things beyond content.</p>
-      <div class="lessons">
-        <span class="lz">lead gen</span><span class="lz">agency stack</span><span class="lz">apps</span><span class="lz">automations</span><span class="lz">agentic OS</span>
-      </div>
+      <div class="part"><div class="lessons"><span class="lz">lead gen</span><span class="lz">agency stack</span><span class="lz">apps</span><span class="lz">automations</span><span class="lz">agentic OS</span></div></div>
     </div>
 
     <div class="module">
-      <div class="mhead"><span class="num">07</span><h3>Design</h3><span class="badge b-done">shipped</span></div>
+      <div class="mhead"><span class="num">06</span><h3>Design</h3><span class="badge b-done">shipped</span></div>
       <p class="desc">how the work gets seen.</p>
-      <div class="lessons">
-        <span class="lz">visual system</span><span class="lz">hostable pages</span><span class="lz">brand assets</span>
-      </div>
+      <div class="part"><div class="lessons"><span class="lz">visual system</span><span class="lz">hostable pages</span><span class="lz">brand assets</span></div></div>
     </div>
 
     <div class="module">
-      <div class="mhead"><span class="num">08</span><h3>Advanced</h3><span class="badge b-next">to build</span></div>
+      <div class="mhead"><span class="num">07</span><h3>Advanced</h3><span class="badge b-next">to build</span></div>
       <p class="desc">the cutting-edge layer.</p>
-      <div class="lessons">
-        <span class="lz">voice agents / voice OS</span><span class="lz">chatbots</span><span class="lz">cutting-edge tools</span>
-      </div>
+      <div class="part"><div class="lessons"><span class="lz">voice agents / voice OS</span><span class="lz">chatbots</span><span class="lz">cutting-edge tools</span></div></div>
     </div>
 
     <div class="module">
-      <div class="mhead"><span class="num">09</span><h3>Compliance</h3><span class="badge b-next">to build</span></div>
+      <div class="mhead"><span class="num">08</span><h3>Compliance</h3><span class="badge b-next">to build</span></div>
       <p class="desc">the unsexy layer that keeps it alive.</p>
-      <div class="lessons">
-        <span class="lz">backups</span><span class="lz">data safety</span><span class="lz">the fact-gate</span><span class="lz">recovery runbook</span>
-      </div>
+      <div class="part"><div class="lessons"><span class="lz">backups</span><span class="lz">data safety</span><span class="lz">the fact-gate</span><span class="lz">recovery runbook</span></div></div>
     </div>
 
     <div class="module">
-      <div class="mhead"><span class="num">10</span><h3>Make money / productize</h3><span class="badge b-next">to build</span></div>
+      <div class="mhead"><span class="num">09</span><h3>Make money / productize</h3><span class="badge b-next">to build</span></div>
       <p class="desc">turn the system into an offer, then package it to install anywhere.</p>
-      <div class="lessons">
-        <span class="lz">positioning</span><span class="lz">offers</span><span class="lz">build &amp; sell</span><span class="lz">package to install anywhere</span>
-      </div>
+      <div class="part"><div class="lessons"><span class="lz">positioning</span><span class="lz">offers</span><span class="lz">build &amp; sell</span><span class="lz">package to install anywhere</span></div></div>
     </div>
 
     <div class="legend">
