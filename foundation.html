@@ -38,6 +38,7 @@
   p{font-size:16px;margin:0 0 12px}
   ol,ul{font-size:16px;padding-left:22px;margin:0 0 12px}
   li{margin:0 0 7px}
+  .blocks li b{color:var(--text)}
   .dl{display:inline-block;background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:8px 13px;font-size:14px;color:var(--text);margin:2px 0}
   .dl b{color:var(--gold)}
   .done{background:var(--surface2);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:0 var(--radius) var(--radius) 0;padding:12px 16px;margin:14px 0;font-size:15px}
@@ -60,81 +61,107 @@
     <p class="lede">The home base. The empty house everything else lives in. Go slow here once, and you never redo it.</p>
     <div class="meta">
       <div class="chip"><b>Outcome</b> · a clean, version-controlled workspace the AI can run</div>
-      <div class="chip"><b>Time</b> · about 90 minutes</div>
-      <div class="chip"><b>7 lessons</b> · one video each</div>
+      <div class="chip"><b>One video per lesson</b></div>
     </div>
   </header>
 
   <div class="toc">
     <p>In this module</p>
     <ol>
-      <li><a href="#l1">Install and your surfaces</a></li>
-      <li><a href="#l2">Permissions and slash commands</a></li>
-      <li><a href="#l3">Your file system</a></li>
-      <li><a href="#l4">Git and GitHub</a></li>
-      <li><a href="#l5">Your rule book and plan mode</a></li>
-      <li><a href="#l6">Connect your tools</a></li>
-      <li><a href="#l7">The data architecture</a></li>
+      <li><a href="#l1">The lay of the land</a></li>
+      <li><a href="#l2">Install and run Claude Code</a></li>
+      <li><a href="#l3">Permissions and slash commands</a></li>
+      <li><a href="#l4">Your file system</a></li>
+      <li><a href="#l5">Git and GitHub</a></li>
+      <li><a href="#l6">Your rule book and plan mode</a></li>
+      <li><a href="#l7">Connect your tools</a></li>
+      <li><a href="#l8">Capture everything</a></li>
+      <li><a href="#l9">The data architecture</a></li>
     </ol>
   </div>
 
   <div class="lesson" id="l1">
-    <p><span class="lnum">Lesson 1</span><span class="vid">video</span></p>
-    <h2>Install and your surfaces</h2>
-    <p class="out">Outcome: Claude Code running, and you know the three places you will work.</p>
-    <p>Claude Code is the tool you will run everything through. It is not a chat window. It can read and write files on your computer, run commands, and talk to your apps. You are not learning to code. You are learning to direct a thing that builds for you.</p>
-    <p>You will work across three surfaces, all the same brain behind different doors: the terminal on your computer (your main workshop), the web version (for when you are away from your machine), and your phone (for quick capture). Set up the terminal first, that is where the real work happens.</p>
-    <h3>Do this</h3>
-    <ol>
-      <li>Download and install Claude Code from the link below. Open it.</li>
-      <li>Sign in and pick your plan.</li>
-      <li>Open it once on your computer to confirm it launches.</li>
-    </ol>
-    <span class="dl"><b>Download</b> · install link + the 60-second setup checklist</span>
-    <div class="done">Done when: Claude Code opens on your computer and you are signed in.</div>
-    <p class="key"><b>Key takeaway:</b> one tool, three doors. The terminal is home base.</p>
+    <p><span class="lnum">Lesson 1.1</span><span class="vid">video</span></p>
+    <h2>The lay of the land</h2>
+    <p class="out">Read this first. Just enough to know what you are working with. You will mostly live in Claude Code. The rest is context.</p>
+    <p>One Claude. Each step adds a building block.</p>
+    <ul class="blocks">
+      <li><b>Claude Chat = a place.</b> Ask, get an answer. It can reach a few tools now, but it cannot work on your real files.</li>
+      <li><b>Claude Projects = a place + rules.</b> A dedicated space with standing instructions plus a knowledge base you add, and it remembers within the project. Every chat starts with your context.</li>
+      <li><b>Cowork = a place + rules + tools.</b> Claude works beside you inside your apps.</li>
+      <li><b>Claude Code = all of it, on your real files.</b> Reads your CLAUDE.md, runs commands, connects your tools, works on your actual business.</li>
+      <li><b>Other features:</b> artifacts, web search and research, voice, file and image analysis, connectors to your apps. Useful extras.</li>
+    </ul>
+    <h3>The difference that matters</h3>
+    <p>Chat and projects talk. Claude Code does. It touches your real files, runs your tools, runs commands. That is why it is the go-to.</p>
+    <h3>vs ChatGPT and other LLMs</h3>
+    <p>Those are chat. Claude Code is an agent that builds. Other models exist, and you can even point Claude Code at them.</p>
+    <h3>Which to use</h3>
+    <p>Quick question or brainstorm, Claude Chat. Building or running your business, Claude Code.</p>
+    <p class="key"><b>Key takeaway:</b> a Project is a place plus rules. Claude Code is that same thing on your real files, with hands.</p>
   </div>
 
   <div class="lesson" id="l2">
-    <p><span class="lnum">Lesson 2</span><span class="vid">video</span></p>
-    <h2>Permissions and slash commands</h2>
-    <p class="out">Outcome: you control what the AI can do on its own, and you know how to trigger saved actions.</p>
-    <p>Two things make Claude Code safe and fast. Permissions decide what it can do without asking you first, that is your seatbelt. Start cautious: it asks before it changes or sends anything. As you build trust, you loosen it. Never the other way around.</p>
-    <p>Slash commands are your buttons. Type a forward slash and you see your saved moves. Right now there are only a few. Later, every skill you install shows up here, so a whole workflow runs from one command.</p>
+    <p><span class="lnum">Lesson 1.2</span><span class="vid">video</span></p>
+    <h2>Install and run Claude Code</h2>
+    <p class="out">Outcome: Claude Code running, signed in, and you know which way you are using it.</p>
+    <p>Three ways to run it, easiest to most powerful:</p>
+    <ul class="blocks">
+      <li><b>Web</b> (claude.com/code): nothing to install, runs in the browser. Start fast, or work away from your computer.</li>
+      <li><b>Desktop app:</b> a local app. Simple.</li>
+      <li><b>Terminal:</b> the full power, your real files plus every tool connected. Install Node with Homebrew, then <code>npm install -g @anthropic-ai/claude-code</code>.</li>
+    </ul>
+    <p>That doubles as your ladder: web is beginner, desktop is intermediate, terminal (and terminal next to Cursor) is advanced.</p>
     <h3>Do this</h3>
     <ol>
-      <li>Set your permission mode to the cautious default (it asks before acting).</li>
-      <li>Type <b>/</b> and look at the commands available today.</li>
-      <li>Run one read-only command to feel it work.</li>
+      <li>Pick your way in. Web to try it, terminal to run your business on it.</li>
+      <li>Sign in with your Claude account. You do not need an API key. (That is only for usage-based billing or headless automation.)</li>
+      <li>Verify it works: run <code>claude --version</code>.</li>
     </ol>
-    <span class="dl"><b>Download</b> · starter permission settings</span>
-    <div class="done">Done when: you have run one command and nothing changed without your say-so.</div>
-    <p class="key"><b>Key takeaway:</b> permissions are the seatbelt, slash commands are the buttons. Loosen the belt slowly.</p>
+    <span class="dl"><b>Download</b> · the install + first-run checklist</span>
+    <div class="done">Done when: <code>claude --version</code> returns a version and you are signed in.</div>
+    <p class="key"><b>My setup:</b> terminal next to Cursor, on the Mac, everything connected.</p>
   </div>
 
   <div class="lesson" id="l3">
-    <p><span class="lnum">Lesson 3</span><span class="vid">video</span></p>
-    <h2>Your file system</h2>
-    <p class="out">Outcome: one folder that holds your whole business, laid out so nothing gets lost.</p>
-    <p>Your second brain lives in files, in one folder on your computer. Not the Desktop, not iCloud Drive (iCloud quietly swaps your files for placeholders and breaks things, more on that in the data architecture lesson). Your home folder.</p>
-    <p>Inside, the layout mirrors this system: a place for your brain (your identity and memory), and a place for each department (content, outreach, sales, clients, finance, admin). One naming rule, lowercase with hyphens, no spaces. Boring and consistent beats clever every time.</p>
+    <p><span class="lnum">Lesson 1.3</span><span class="vid">video</span></p>
+    <h2>Permissions and slash commands</h2>
+    <p class="out">Outcome: you control what the AI does on its own, and you know how to trigger saved actions.</p>
+    <p>Permissions are your seatbelt: they decide what Claude can do without asking. Start cautious, it asks before it changes or sends anything, and loosen it as you trust it, never the other way.</p>
+    <p>Slash commands are your buttons. Type a slash and you see your saved moves. Today there are a few. Later every skill you install shows up here, so a whole workflow runs from one command.</p>
     <h3>Do this</h3>
     <ol>
-      <li>Create one home folder for your business in your home directory.</li>
-      <li>Drop in the folder-structure template below and let Claude Code build out the rooms.</li>
-      <li>Apply the naming rule to everything from here on.</li>
+      <li>Set permissions to the cautious default.</li>
+      <li>Type a slash and look at what is available.</li>
+      <li>Run one read-only command to feel it.</li>
     </ol>
-    <span class="dl"><b>Download</b> · folder-structure template</span>
-    <div class="done">Done when: you have one tidy home folder with a place for the brain and a place for each department.</div>
-    <p class="key"><b>Key takeaway:</b> a tidy house is a system. A messy one is just noise in a different place.</p>
+    <span class="dl"><b>Download</b> · starter permission settings</span>
+    <div class="done">Done when: you ran a command and nothing changed without your say-so.</div>
+    <p class="key"><b>Key takeaway:</b> permissions are the seatbelt, slash commands are the buttons.</p>
   </div>
 
   <div class="lesson" id="l4">
-    <p><span class="lnum">Lesson 4</span><span class="vid">video</span></p>
+    <p><span class="lnum">Lesson 1.4</span><span class="vid">video</span></p>
+    <h2>Your file system</h2>
+    <p class="out">Outcome: one folder that holds your whole business, laid out so nothing gets lost.</p>
+    <p>Your second brain lives in files, in one folder on your computer. Your home folder, not the Desktop, not iCloud Drive (iCloud quietly swaps files for placeholders and breaks things, more in the data architecture lesson).</p>
+    <p>Inside, the layout mirrors this system: a place for your brain (identity and memory) and a place for each department. One naming rule: lowercase, hyphens, no spaces.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Create one home folder for your business in your home directory.</li>
+      <li>Drop in the folder template and let Claude Code build the rooms.</li>
+      <li>Apply the naming rule to everything from here.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · folder-structure template</span>
+    <div class="done">Done when: one tidy home folder, a place for the brain and a place for each department.</div>
+    <p class="key"><b>Key takeaway:</b> a tidy house is a system. A messy one is noise in a different place.</p>
+  </div>
+
+  <div class="lesson" id="l5">
+    <p><span class="lnum">Lesson 1.5</span><span class="vid">video</span></p>
     <h2>Git and GitHub</h2>
     <p class="out">Outcome: your workspace is backed up and versioned, so you can never truly lose work.</p>
-    <p>Git takes a snapshot of your folder every time you save (a commit), so you can always go back. GitHub is the same thing in the cloud, a private copy that is the real one, the master. Your computer is just a working copy.</p>
-    <p>You do not need to learn git commands. Claude Code does it for you. You just need to understand the habit: save a version, push it up. Do it once by hand so it sticks, then it happens in the background.</p>
+    <p>Git takes a snapshot of your folder every time you save (a commit), so you can always go back. GitHub is the same thing in the cloud, a private copy that is the real one, the master. Your computer is a working copy. You do not learn git commands, Claude Code does it. You just keep the habit: save a version, push it up.</p>
     <h3>Do this</h3>
     <ol>
       <li>Turn your home folder into a git repository (Claude Code walks you through it).</li>
@@ -146,61 +173,76 @@
     <p class="key"><b>Key takeaway:</b> GitHub is the master, your computer is a copy, your chat window is nothing. If it matters, it is committed.</p>
   </div>
 
-  <div class="lesson" id="l5">
-    <p><span class="lnum">Lesson 5</span><span class="vid">video</span></p>
+  <div class="lesson" id="l6">
+    <p><span class="lnum">Lesson 1.6</span><span class="vid">video</span></p>
     <h2>Your rule book and plan mode</h2>
     <p class="out">Outcome: one file the AI reads every time, plus a way to make it plan before it acts.</p>
-    <p>CLAUDE.md is your house rules. It is a plain file at the top of your workspace that the AI reads every single session: how you write, what to never do, where things live. Write the rule once and every session follows it. That is the difference between a tool and an employee.</p>
-    <p>Plan mode is the second half. For anything big, the AI lays out the plan first, you approve it, then it builds. No surprises, no runaway changes.</p>
+    <p>Remember Claude Projects, standing instructions plus a knowledge base? CLAUDE.md is that same idea, now in your real files instead of inside chat. It is your house rules: a plain file at the top of your workspace the AI reads every session. How you write, what to never do, where things live. Write the rule once and every session follows it. That is the difference between a tool and an employee.</p>
+    <p>Plan mode is the other half. For anything big, the AI lays out the plan, you approve, then it builds. No surprises.</p>
     <h3>Do this</h3>
     <ol>
-      <li>Drop the starter CLAUDE.md template at the top of your workspace.</li>
+      <li>Drop the starter CLAUDE.md at the top of your workspace.</li>
       <li>Add your non-negotiables (for example: no em dashes, always ask before sending anything).</li>
-      <li>Turn on plan mode and watch it propose a plan before it touches anything.</li>
+      <li>Turn on plan mode and watch it propose before it touches anything.</li>
     </ol>
     <span class="dl"><b>Download</b> · starter CLAUDE.md template</span>
     <div class="done">Done when: you have a CLAUDE.md with your rules, and plan mode asks before big changes.</div>
     <p class="key"><b>Key takeaway:</b> write the rule once, every session obeys it.</p>
   </div>
 
-  <div class="lesson" id="l6">
-    <p><span class="lnum">Lesson 6</span><span class="vid">video</span></p>
+  <div class="lesson" id="l7">
+    <p><span class="lnum">Lesson 1.7</span><span class="vid">video</span></p>
     <h2>Connect your tools</h2>
     <p class="out">Outcome: the AI can reach the apps you already use.</p>
-    <p>Your tools connect through something called MCP. Think of each connection as a new hand the system grows: your calendar, your email, your database, your docs. Once connected, the AI can read and act in those apps for you.</p>
-    <p>Connect one at a time, as you need it, not all at once. Start with one simple one and confirm the AI can see it before you add more. A clean set of connections beats a pile of half-working ones.</p>
+    <p>Your tools connect through MCP. Each connection is a new hand the system grows: your calendar, email, database, docs. Connect one at a time, as you need it, not all at once. Start with one and confirm Claude can see it before you add more.</p>
     <h3>Do this</h3>
     <ol>
-      <li>Connect your first tool with the connector guide below (start with your calendar or database).</li>
-      <li>Ask the AI to read something simple from it to confirm the link.</li>
-      <li>Add more tools only when a lesson calls for them.</li>
+      <li>Connect your first tool with the connector guide (start with your calendar or database).</li>
+      <li>Ask Claude to read something simple from it to confirm the link.</li>
+      <li>Add more only when a lesson calls for it.</li>
     </ol>
     <span class="dl"><b>Download</b> · connector setup guide</span>
-    <div class="done">Done when: the AI can read from one of your real tools.</div>
+    <div class="done">Done when: Claude can read from one of your real tools.</div>
     <p class="key"><b>Key takeaway:</b> every tool you connect is a hand the system grows. Connect on demand.</p>
   </div>
 
-  <div class="lesson" id="l7">
-    <p><span class="lnum">Lesson 7</span><span class="vid">video</span></p>
-    <h2>The data architecture</h2>
-    <p class="out">Outcome: you know where every kind of thing lives, what is the master, and how to never lose data.</p>
-    <p>This is the lesson most people skip and later regret. Every piece of data has one of three roles. The <b>master</b> is the real, true copy. A <b>copy</b> is a working version you can edit freely. A <b>cache</b> is throwaway, something you can always regenerate. The whole trick is knowing which is which, so you never destroy the only real copy of something.</p>
-    <p>Here is the map you are setting up. GitHub is your master. Your computer is a working copy. Your databases and notes are a cache or a system of record. The cloud (Google Drive, Dropbox) is cold storage. And the discipline that ties it together: never move or delete the only copy of anything. Copy it, confirm it landed, then remove the original.</p>
-    <p>One specific trap, because it is the most common: never keep your working folder inside iCloud Drive. iCloud swaps your files for tiny placeholders to save space, and that silently breaks git, your tools, and the AI's ability to read your files. Home folder only.</p>
+  <div class="lesson" id="l8">
+    <p><span class="lnum">Lesson 1.8</span><span class="vid">video</span></p>
+    <h2>Capture everything</h2>
+    <p class="out">Outcome: one inbox where every idea, note, and loose end lands, so none of it lives in your head.</p>
+    <p>This is the Getting Things Done principle, and it is the cure for a million tabs open in your head: your mind is for having ideas, not holding them. You set up one capture spot. An idea on your phone, a thought mid-call, a to-do, it all goes to the same place, fast, then gets sorted later.</p>
     <h3>Do this</h3>
     <ol>
-      <li>Fill in the data-architecture map template below for your setup.</li>
+      <li>Set up one capture inbox in your workspace (a single note or a quick-capture command).</li>
+      <li>Practice the habit: capture first, sort later. Do not organize in the moment.</li>
+      <li>Empty the inbox on a schedule (the weekly review comes later).</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the capture inbox setup</span>
+    <div class="done">Done when: you have one place everything lands, and you trust it.</div>
+    <p class="key"><b>Key takeaway:</b> your mind is for having ideas, not holding them. Capture first, clarify later.</p>
+  </div>
+
+  <div class="lesson" id="l9">
+    <p><span class="lnum">Lesson 1.9</span><span class="vid">video</span></p>
+    <h2>The data architecture</h2>
+    <p class="out">Outcome: you know where every kind of thing lives, what is the master, and how to never lose data.</p>
+    <p>The lesson most people skip and later regret. Every piece of data has one of three roles. The <b>master</b> is the real, true copy. A <b>copy</b> is a working version you edit freely. A <b>cache</b> is throwaway, something you can always regenerate. The whole trick is knowing which is which, so you never destroy the only real copy.</p>
+    <p>Your map: GitHub is the master, your computer is a working copy, your databases and notes are a cache or system of record, the cloud is cold storage. The discipline: never move or delete the only copy of anything. Copy it, confirm it landed, then remove the original.</p>
+    <p>One trap because it is the most common: never keep your working folder inside iCloud Drive. iCloud swaps files for placeholders to save space and silently breaks git, your tools, and the AI reading your files. Home folder only.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Fill in the data-architecture map for your setup.</li>
       <li>Name your master for each kind of thing (files, money data, content data).</li>
-      <li>Adopt the one discipline: copy, verify, then delete. Never delete the only copy.</li>
+      <li>Adopt the discipline: copy, verify, then delete. Never delete the only copy.</li>
     </ol>
     <span class="dl"><b>Download</b> · data-architecture map template</span>
-    <div class="done">Done when: you can point to the master for every kind of data you own, and nothing critical lives only in iCloud.</div>
+    <div class="done">Done when: you can point to the master for every kind of data, and nothing critical lives only in iCloud.</div>
     <p class="key"><b>Key takeaway:</b> most people lose work because they never decided what the master is. You just did.</p>
   </div>
 
   <div class="lesson" style="border-bottom:1px solid var(--line)">
     <h3 style="color:var(--muted)">What you walk away with</h3>
-    <p>A real home base: one tidy, version-controlled workspace, connected to your tools, with a rule book the AI follows and a clear map of where everything lives. The empty house, built right. Next you move in.</p>
+    <p>A real home base: one tidy, version-controlled workspace, connected to your tools, with a rule book the AI follows, a capture inbox, and a clear map of where everything lives. The empty house, built right. Next you move in.</p>
   </div>
 
   <a class="next" href="index.html"><span>next</span><b>Module 02 · Second brain &rarr;</b> teach it who you are and what your business is</a>
