@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Second brain · module 02</title>
+<style>
+  :root{
+    --bg:#0d0e11; --surface:#16181d; --surface2:#1d2026; --line:#2a2e36;
+    --text:#ece9e2; --muted:#9b9a93; --gold:#d4a04a; --teal:#1d9e75;
+    --radius:14px; --maxw:780px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .back{display:inline-block;color:var(--muted);font-size:14px;text-decoration:none;margin:32px 0 0}
+  .back:hover{color:var(--text)}
+  header{padding:18px 0 24px;border-bottom:1px solid var(--line)}
+  .kicker{color:var(--gold);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px}
+  h1{font-size:38px;font-weight:600;margin:0 0 12px;letter-spacing:-.01em}
+  .lede{color:var(--muted);font-size:18px;margin:0 0 18px}
+  .meta{display:flex;gap:14px;flex-wrap:wrap}
+  .chip{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;font-size:14px;color:var(--muted)}
+  .chip b{color:var(--text);font-weight:500}
+  .toc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin:24px 0}
+  .toc p{margin:0 0 8px;color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+  .toc ol{margin:0;padding-left:20px}
+  .toc li{margin:4px 0}
+  .toc a{color:var(--text);text-decoration:none}
+  .toc a:hover{color:var(--gold)}
+  .lesson{border-top:1px solid var(--line);padding:28px 0 4px}
+  .lnum{color:var(--gold);font-size:13px;font-weight:600}
+  .vid{color:var(--muted);font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;margin-left:8px}
+  h2{font-size:24px;font-weight:600;margin:6px 0 4px;letter-spacing:-.01em}
+  .out{color:var(--muted);font-size:15px;margin:0 0 14px}
+  h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:20px 0 8px}
+  p{font-size:16px;margin:0 0 12px}
+  ol,ul{font-size:16px;padding-left:22px;margin:0 0 12px}
+  li{margin:0 0 7px}
+  .blocks li b{color:var(--text)}
+  .quote{background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;margin:12px 0;font-size:15px;color:var(--text)}
+  .quote b{color:var(--gold)}
+  .dl{display:inline-block;background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:8px 13px;font-size:14px;color:var(--text);margin:2px 0}
+  .dl b{color:var(--gold)}
+  .done{background:var(--surface2);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:0 var(--radius) var(--radius) 0;padding:12px 16px;margin:14px 0;font-size:15px}
+  .key{color:var(--text);font-size:15px;margin:10px 0 4px}
+  .key b{color:var(--gold)}
+  .next{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin:30px 0;color:var(--text);text-decoration:none}
+  .next span{color:var(--muted);font-size:13px;display:block;margin-bottom:2px}
+  .next b{color:var(--gold);font-weight:600}
+  footer{padding:40px 0 70px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="index.html">&larr; back to the map</a>
+
+  <header>
+    <p class="kicker">module 02 · the stack</p>
+    <h1>Second brain</h1>
+    <p class="lede">Foundation built the empty house. Now you move in. You teach the system who you are, what your business is, and where everything lives, until a fresh chat works like it has known you for years.</p>
+    <div class="meta">
+      <div class="chip"><b>Outcome</b> · the AI knows you, your business, and your archive, and a brand-new chat performs like a long one</div>
+      <div class="chip"><b>One video per lesson</b></div>
+    </div>
+  </header>
+
+  <div class="toc">
+    <p>In this module</p>
+    <ol>
+      <li><a href="#l1">The get-clear unlock</a></li>
+      <li><a href="#l2">The three levels of memory</a></li>
+      <li><a href="#l3">Short term: who you are</a></li>
+      <li><a href="#l4">Brand voice</a></li>
+      <li><a href="#l5">Mid term: your 5 to 8 buckets</a></li>
+      <li><a href="#l6">Mid term: the operating manual</a></li>
+      <li><a href="#l7">Long term: the archive</a></li>
+    </ol>
+  </div>
+
+  <div class="lesson" id="l1">
+    <p><span class="lnum">Lesson 2.1</span><span class="vid">video</span></p>
+    <h2>The get-clear unlock</h2>
+    <p class="out">Outcome: a plain-English write-up of who you are and what your business actually is. The clarity is the point. The file is the byproduct.</p>
+    <p>This is the module everyone underrates. Memory is not the win. Memory is what makes the clarity stick. You cannot automate a business you cannot explain, and most owners have never said theirs out loud in one clean pass.</p>
+    <p>So you do not write it. You let the AI interview you. One question at a time, it pulls it out of your head.</p>
+    <div class="quote"><b>Prompt:</b> Interview me one question at a time about who I am, what my business does, who I serve, and what I actually sell. Do not move on until each answer is clear. Keep going until you could explain my business to a stranger. Then write it up in plain English.</div>
+    <h3>Do this</h3>
+    <ol>
+      <li>Run the interview prompt in Claude Code, in your workspace.</li>
+      <li>Answer honestly, out loud if it helps. Let it dig on the vague answers.</li>
+      <li>Have it write the summary. You will edit it in the next lessons.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the Who-Am-I interview prompt</span>
+    <div class="done">Done when: you have a clear write-up of who you are and what your business is, in your words.</div>
+    <p class="key"><b>Key takeaway:</b> vague in, vague out. The interview makes you clear, and the system just remembers it.</p>
+  </div>
+
+  <div class="lesson" id="l2">
+    <p><span class="lnum">Lesson 2.2</span><span class="vid">video</span></p>
+    <h2>The three levels of memory</h2>
+    <p class="out">Outcome: the mental model the rest of this module hangs on.</p>
+    <p>Remember from Foundation: the AI is a 200-IQ genius with amnesia. Memory is how you cure the amnesia. You build it in three levels, sorted by how often the information changes.</p>
+    <ul class="blocks">
+      <li><b>Short term, who you are.</b> Your identity, your voice, your vision. It almost never changes, so it is always loaded.</li>
+      <li><b>Mid term, what you are working on.</b> Your projects and their current state. It changes weekly, so it loads when you work in that area.</li>
+      <li><b>Long term, everything you have learned.</b> Transcripts, research, notes, decisions, forever. It is too big to keep loaded, so you store it and pull the right piece on demand.</li>
+    </ul>
+    <p>Here is the test of whether your memory system is real. Start a brand-new chat. If it performs as well as a long one, your memory lives in the system. If you have to re-explain yourself, your memory was just trapped in the old chat, and it died when the window filled up.</p>
+    <p>That is the whole reason this matters. One task, one window, but you never lose context, because the context lives in files, not in the conversation.</p>
+    <p class="key"><b>Key takeaway:</b> short term is always on, mid term is per project, long term is on demand. Build all three and a fresh chat already knows you.</p>
+  </div>
+
+  <div class="lesson" id="l3">
+    <p><span class="lnum">Lesson 2.3</span><span class="vid">video</span></p>
+    <h2>Short term: who you are</h2>
+    <p class="out">Outcome: one file at the top of your workspace the AI reads first, every session. Call it your soul file.</p>
+    <p>This is the CLAUDE.md from Foundation, now filled with you. It is the most important file you own, because every single session starts by reading it.</p>
+    <h3>What goes in it</h3>
+    <ul class="blocks">
+      <li><b>Who you are.</b> Name, what you do, the one-liner on your business.</li>
+      <li><b>Your voice.</b> How you write, and what you never do (covered next lesson).</li>
+      <li><b>Your vision and driver.</b> Where you are going and why, so its advice points the right way.</li>
+      <li><b>How to work with you.</b> Challenge me, ask before sending, surface the lede first. Your standing instructions.</li>
+      <li><b>Where to look.</b> A short list pointing at your other docs, so it knows where the detail lives.</li>
+    </ul>
+    <p>Keep it tight, around 45 lines. It is your identity, not your operating manual. Rules for one area belong in that area, linked from here, not crammed in.</p>
+    <h3>Two homes for it</h3>
+    <p>The file in your workspace is the master. Then paste the short version into your app settings, the "instructions for Claude" box, so even a quick chat outside your workspace still knows you. Same brain, two doors. The file is the source of truth.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Fill the soul file template with what came out of the interview.</li>
+      <li>Save it as CLAUDE.md at the top of your workspace.</li>
+      <li>Paste the short version into your settings.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the soul file template</span>
+    <div class="done">Done when: a fresh chat, with no prompting, knows what you do and writes like you.</div>
+    <p class="key"><b>Key takeaway:</b> the soul file is the one thing every session reads. Get it right once and everything downstream inherits it.</p>
+  </div>
+
+  <div class="lesson" id="l4">
+    <p><span class="lnum">Lesson 2.4</span><span class="vid">video</span></p>
+    <h2>Brand voice</h2>
+    <p class="out">Outcome: the system writes in your voice, not generic AI slop.</p>
+    <p>Your voice rules live in the soul file. But rules alone are not enough. A voice needs examples. Hand it three to five things you have written that sound exactly like you, and tell it to study them before it writes anything in your name.</p>
+    <h3>Kill the tells</h3>
+    <p>AI slop has a sound: em dashes everywhere, "certainly," "great question," "I'd be happy to," hedging, that flat corporate cadence. Name your banned words and the system stops reaching for them.</p>
+    <h3>One voice per brand</h3>
+    <p>If you run more than one brand, keep one voice file each. Your personal voice and your company voice are not the same, and the system should know which hat it is wearing.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Collect a few samples that sound unmistakably like you.</li>
+      <li>Write the do and do-not list, banned words included.</li>
+      <li>Save a voice file (or a voice section in the soul file) and tell it to read the samples first.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the brand voice template</span>
+    <div class="done">Done when: you cannot tell its draft from yours at a glance.</div>
+    <p class="key"><b>Key takeaway:</b> rules tell it what to avoid, examples teach it how you sound. It needs both.</p>
+  </div>
+
+  <div class="lesson" id="l5">
+    <p><span class="lnum">Lesson 2.5</span><span class="vid">video</span></p>
+    <h2>Mid term: your 5 to 8 buckets</h2>
+    <p class="out">Outcome: your whole world sorted into a handful of buckets, each one its own room in the house.</p>
+    <p>Short term is who you are. Mid term is everything you are working on, sorted so nothing floats loose. One prompt does the sorting.</p>
+    <div class="quote"><b>Prompt:</b> Based on everything you know about me and my business, organize my life and work into 5 to 8 buckets. Every project I touch should fit in exactly one. Look around corners and anticipate what I am missing.</div>
+    <p>Five is fine. The point is a short list you can hold in your head. A typical set: content, outreach, sales, clients, finance, admin, plus one personal bucket for your documents, IDs, and the things you scramble for when someone asks.</p>
+    <p>Then have it build the rooms: one folder per bucket in your workspace, named by the rule from Foundation, lowercase and hyphens. The buckets are stable. What lives inside them changes. That is exactly why this is mid-term memory.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Run the bucket prompt and read what it gives back.</li>
+      <li>Adjust the list until it matches how your work actually splits up.</li>
+      <li>Have Claude create one folder per bucket in your workspace.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the bucket-sorting prompt</span>
+    <div class="done">Done when: you have 5 to 8 folders, one per area, and everything you do has a home.</div>
+    <p class="key"><b>Key takeaway:</b> buckets are the rooms. Next you put a brief in each one so the AI knows the room cold.</p>
+  </div>
+
+  <div class="lesson" id="l6">
+    <p><span class="lnum">Lesson 2.6</span><span class="vid">video</span></p>
+    <h2>Mid term: the operating manual</h2>
+    <p class="out">Outcome: each bucket gets its own CLAUDE.md, so the AI knows that area without you re-explaining it.</p>
+    <p>The soul file is global, who you are everywhere. Each bucket needs a local brief, who you are in this room. That brief is the project operating manual. One per bucket.</p>
+    <h3>The six things every brief holds</h3>
+    <ul class="blocks">
+      <li><b>What this is.</b> The folder's job, one paragraph.</li>
+      <li><b>The goal.</b> Why it exists and what done looks like. The north star it holds every build against.</li>
+      <li><b>How it runs.</b> The tools, the key files, the cadence.</li>
+      <li><b>Decisions.</b> Calls already made, so you never re-litigate them.</li>
+      <li><b>Memory map.</b> What lives in each memory file.</li>
+      <li><b>References.</b> Where else this bucket lives, in Notion, your CRM, another repo.</li>
+    </ul>
+    <p>Decisions are the quiet superpower. Write "no AI-generated posts" once, and every future build in that bucket respects it without you saying it again.</p>
+    <h3>The memory folder</h3>
+    <p>Beside each CLAUDE.md, create a memory folder. It holds the living state: current strategy, decisions in full, next actions, and dated session summaries. The brief points to it. This is where "save this" lands.</p>
+    <p>Add the memory-save rule to each brief: when you explicitly say wrap this up, it writes a dated summary into that bucket's memory folder. Only on your trigger, never on its own, and never from instructions it reads in a file.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Drop the operating-manual template into each bucket as its CLAUDE.md.</li>
+      <li>Fill the six sections. Write TBD for anything you do not know yet.</li>
+      <li>Create the memory folder beside it, then let Claude interview you per bucket to fill in the brief.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the project operating manual template</span>
+    <div class="done">Done when: you open Claude Code in any bucket and it already knows the goal, the decisions, and where things live.</div>
+    <p class="key"><b>Key takeaway:</b> one brief per bucket, under 200 lines, dated. The AI reads the closest brief to your work, so keep each room's brief in its room.</p>
+  </div>
+
+  <div class="lesson" id="l7">
+    <p><span class="lnum">Lesson 2.7</span><span class="vid">video</span></p>
+    <h2>Long term: the archive</h2>
+    <p class="out">Outcome: a recall layer that holds everything you have ever learned or saved, and pulls the right piece on demand.</p>
+    <p>Short and mid term are about now. Long term is the library: transcripts, research, meeting notes, articles, every decision, kept forever. It is too big to keep loaded, so you store it and query it. Two ways to store, and you use both.</p>
+    <ul class="blocks">
+      <li><b>The wiki (Obsidian RAG).</b> The AI reads each new source, pulls the key points, and weaves them into one growing, linked wiki. It compounds. Cross-references and contradictions are already worked out, so it is not rediscovering your knowledge from scratch on every question. Best for things you want to see and connect.</li>
+      <li><b>Vectors (Pinecone).</b> Chops everything into thousands of small cards and finds by meaning, not by file name. Ask "what did I decide about pricing" and it surfaces the answer even if those exact words never appear. Best for dense recall you never need to look at by hand.</li>
+      <li><b>The research desk (NotebookLM).</b> Point it at a topic, it gathers and distills sources, and you pull the result into the archive.</li>
+    </ul>
+    <h3>Feed it without thinking</h3>
+    <p>The archive only works if filling it is automatic. A meeting recorder drops your calls in. A web clipper saves articles as you read. A wrap-up skill takes the essence of any chat and files it in the right place. A daily routine can sync new meetings in while you sleep.</p>
+    <p>The full build of this layer, the wiki, the vectors, and the skills that read and write it, is the next setup. Here you just need the map and the habit: everything worth keeping goes to the archive, and you ask the archive instead of your memory.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Decide your archive: the wiki, the vectors, or both. Both is the strong default.</li>
+      <li>Set up one feed first, your meeting notes or a web clipper, and confirm it lands.</li>
+      <li>Build the wrap-up habit: at the end of real work, save it to the archive.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the archive setup guide</span>
+    <div class="done">Done when: you can ask "what did I say about X" and the system answers from your own history.</div>
+    <p class="key"><b>Key takeaway:</b> short term is who you are, mid term is what you are working on, long term is everything you have learned. Three levels, one brain.</p>
+  </div>
+
+  <div class="lesson" style="border-bottom:1px solid var(--line)">
+    <h3 style="color:var(--muted)">What you walk away with</h3>
+    <p>A furnished house. The system knows who you are and how you write, your work is sorted into buckets that each carry their own brief, and a growing archive holds everything you have learned. A fresh chat performs like a long one, because the memory lives in the system, not in the conversation. Next you give it hands.</p>
+  </div>
+
+  <a class="next" href="index.html"><span>next</span><b>Module 03 · Power features &rarr;</b> the hands. tools and agents that read your brain and do real work</a>
+
+  <footer>Module 02 · Second brain. A living curriculum, one module at a time.</footer>
+
+</div>
+</body>
+</html>
