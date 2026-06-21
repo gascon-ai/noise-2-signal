@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Foundation — module 01</title>
+<style>
+  :root{
+    --bg:#0d0e11; --surface:#16181d; --surface2:#1d2026; --line:#2a2e36;
+    --text:#ece9e2; --muted:#9b9a93; --gold:#d4a04a; --teal:#1d9e75;
+    --radius:14px; --maxw:780px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .back{display:inline-block;color:var(--muted);font-size:14px;text-decoration:none;margin:32px 0 0}
+  .back:hover{color:var(--text)}
+  header{padding:18px 0 24px;border-bottom:1px solid var(--line)}
+  .kicker{color:var(--gold);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px}
+  h1{font-size:38px;font-weight:600;margin:0 0 12px;letter-spacing:-.01em}
+  .lede{color:var(--muted);font-size:18px;margin:0 0 18px}
+  .meta{display:flex;gap:14px;flex-wrap:wrap}
+  .chip{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;font-size:14px;color:var(--muted)}
+  .chip b{color:var(--text);font-weight:500}
+  .toc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin:24px 0}
+  .toc p{margin:0 0 8px;color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+  .toc ol{margin:0;padding-left:20px}
+  .toc li{margin:4px 0}
+  .toc a{color:var(--text);text-decoration:none}
+  .toc a:hover{color:var(--gold)}
+  .lesson{border-top:1px solid var(--line);padding:28px 0 4px}
+  .lnum{color:var(--gold);font-size:13px;font-weight:600}
+  .vid{color:var(--muted);font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;margin-left:8px}
+  h2{font-size:24px;font-weight:600;margin:6px 0 4px;letter-spacing:-.01em}
+  .out{color:var(--muted);font-size:15px;margin:0 0 14px}
+  h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:20px 0 8px}
+  p{font-size:16px;margin:0 0 12px}
+  ol,ul{font-size:16px;padding-left:22px;margin:0 0 12px}
+  li{margin:0 0 7px}
+  .dl{display:inline-block;background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:8px 13px;font-size:14px;color:var(--text);margin:2px 0}
+  .dl b{color:var(--gold)}
+  .done{background:var(--surface2);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:0 var(--radius) var(--radius) 0;padding:12px 16px;margin:14px 0;font-size:15px}
+  .key{color:var(--text);font-size:15px;margin:10px 0 4px}
+  .key b{color:var(--gold)}
+  .next{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin:30px 0;color:var(--text);text-decoration:none}
+  .next span{color:var(--muted);font-size:13px;display:block;margin-bottom:2px}
+  .next b{color:var(--gold);font-weight:600}
+  footer{padding:40px 0 70px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="index.html">&larr; back to the map</a>
+
+  <header>
+    <p class="kicker">module 01 · the stack</p>
+    <h1>Foundation</h1>
+    <p class="lede">The home base. The empty house everything else lives in. Go slow here once, and you never redo it.</p>
+    <div class="meta">
+      <div class="chip"><b>Outcome</b> · a clean, version-controlled workspace the AI can run</div>
+      <div class="chip"><b>Time</b> · about 90 minutes</div>
+      <div class="chip"><b>7 lessons</b> · one video each</div>
+    </div>
+  </header>
+
+  <div class="toc">
+    <p>In this module</p>
+    <ol>
+      <li><a href="#l1">Install and your surfaces</a></li>
+      <li><a href="#l2">Permissions and slash commands</a></li>
+      <li><a href="#l3">Your file system</a></li>
+      <li><a href="#l4">Git and GitHub</a></li>
+      <li><a href="#l5">Your rule book and plan mode</a></li>
+      <li><a href="#l6">Connect your tools</a></li>
+      <li><a href="#l7">The data architecture</a></li>
+    </ol>
+  </div>
+
+  <div class="lesson" id="l1">
+    <p><span class="lnum">Lesson 1</span><span class="vid">video</span></p>
+    <h2>Install and your surfaces</h2>
+    <p class="out">Outcome: Claude Code running, and you know the three places you will work.</p>
+    <p>Claude Code is the tool you will run everything through. It is not a chat window. It can read and write files on your computer, run commands, and talk to your apps. You are not learning to code. You are learning to direct a thing that builds for you.</p>
+    <p>You will work across three surfaces, all the same brain behind different doors: the terminal on your computer (your main workshop), the web version (for when you are away from your machine), and your phone (for quick capture). Set up the terminal first, that is where the real work happens.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Download and install Claude Code from the link below. Open it.</li>
+      <li>Sign in and pick your plan.</li>
+      <li>Open it once on your computer to confirm it launches.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · install link + the 60-second setup checklist</span>
+    <div class="done">Done when: Claude Code opens on your computer and you are signed in.</div>
+    <p class="key"><b>Key takeaway:</b> one tool, three doors. The terminal is home base.</p>
+  </div>
+
+  <div class="lesson" id="l2">
+    <p><span class="lnum">Lesson 2</span><span class="vid">video</span></p>
+    <h2>Permissions and slash commands</h2>
+    <p class="out">Outcome: you control what the AI can do on its own, and you know how to trigger saved actions.</p>
+    <p>Two things make Claude Code safe and fast. Permissions decide what it can do without asking you first, that is your seatbelt. Start cautious: it asks before it changes or sends anything. As you build trust, you loosen it. Never the other way around.</p>
+    <p>Slash commands are your buttons. Type a forward slash and you see your saved moves. Right now there are only a few. Later, every skill you install shows up here, so a whole workflow runs from one command.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Set your permission mode to the cautious default (it asks before acting).</li>
+      <li>Type <b>/</b> and look at the commands available today.</li>
+      <li>Run one read-only command to feel it work.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · starter permission settings</span>
+    <div class="done">Done when: you have run one command and nothing changed without your say-so.</div>
+    <p class="key"><b>Key takeaway:</b> permissions are the seatbelt, slash commands are the buttons. Loosen the belt slowly.</p>
+  </div>
+
+  <div class="lesson" id="l3">
+    <p><span class="lnum">Lesson 3</span><span class="vid">video</span></p>
+    <h2>Your file system</h2>
+    <p class="out">Outcome: one folder that holds your whole business, laid out so nothing gets lost.</p>
+    <p>Your second brain lives in files, in one folder on your computer. Not the Desktop, not iCloud Drive (iCloud quietly swaps your files for placeholders and breaks things, more on that in the data architecture lesson). Your home folder.</p>
+    <p>Inside, the layout mirrors this system: a place for your brain (your identity and memory), and a place for each department (content, outreach, sales, clients, finance, admin). One naming rule, lowercase with hyphens, no spaces. Boring and consistent beats clever every time.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Create one home folder for your business in your home directory.</li>
+      <li>Drop in the folder-structure template below and let Claude Code build out the rooms.</li>
+      <li>Apply the naming rule to everything from here on.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · folder-structure template</span>
+    <div class="done">Done when: you have one tidy home folder with a place for the brain and a place for each department.</div>
+    <p class="key"><b>Key takeaway:</b> a tidy house is a system. A messy one is just noise in a different place.</p>
+  </div>
+
+  <div class="lesson" id="l4">
+    <p><span class="lnum">Lesson 4</span><span class="vid">video</span></p>
+    <h2>Git and GitHub</h2>
+    <p class="out">Outcome: your workspace is backed up and versioned, so you can never truly lose work.</p>
+    <p>Git takes a snapshot of your folder every time you save (a commit), so you can always go back. GitHub is the same thing in the cloud, a private copy that is the real one, the master. Your computer is just a working copy.</p>
+    <p>You do not need to learn git commands. Claude Code does it for you. You just need to understand the habit: save a version, push it up. Do it once by hand so it sticks, then it happens in the background.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Turn your home folder into a git repository (Claude Code walks you through it).</li>
+      <li>Create a private GitHub repo and connect it.</li>
+      <li>Save your first version and push it up.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · git + GitHub setup walkthrough</span>
+    <div class="done">Done when: your folder shows up in your private GitHub repo.</div>
+    <p class="key"><b>Key takeaway:</b> GitHub is the master, your computer is a copy, your chat window is nothing. If it matters, it is committed.</p>
+  </div>
+
+  <div class="lesson" id="l5">
+    <p><span class="lnum">Lesson 5</span><span class="vid">video</span></p>
+    <h2>Your rule book and plan mode</h2>
+    <p class="out">Outcome: one file the AI reads every time, plus a way to make it plan before it acts.</p>
+    <p>CLAUDE.md is your house rules. It is a plain file at the top of your workspace that the AI reads every single session: how you write, what to never do, where things live. Write the rule once and every session follows it. That is the difference between a tool and an employee.</p>
+    <p>Plan mode is the second half. For anything big, the AI lays out the plan first, you approve it, then it builds. No surprises, no runaway changes.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Drop the starter CLAUDE.md template at the top of your workspace.</li>
+      <li>Add your non-negotiables (for example: no em dashes, always ask before sending anything).</li>
+      <li>Turn on plan mode and watch it propose a plan before it touches anything.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · starter CLAUDE.md template</span>
+    <div class="done">Done when: you have a CLAUDE.md with your rules, and plan mode asks before big changes.</div>
+    <p class="key"><b>Key takeaway:</b> write the rule once, every session obeys it.</p>
+  </div>
+
+  <div class="lesson" id="l6">
+    <p><span class="lnum">Lesson 6</span><span class="vid">video</span></p>
+    <h2>Connect your tools</h2>
+    <p class="out">Outcome: the AI can reach the apps you already use.</p>
+    <p>Your tools connect through something called MCP. Think of each connection as a new hand the system grows: your calendar, your email, your database, your docs. Once connected, the AI can read and act in those apps for you.</p>
+    <p>Connect one at a time, as you need it, not all at once. Start with one simple one and confirm the AI can see it before you add more. A clean set of connections beats a pile of half-working ones.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Connect your first tool with the connector guide below (start with your calendar or database).</li>
+      <li>Ask the AI to read something simple from it to confirm the link.</li>
+      <li>Add more tools only when a lesson calls for them.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · connector setup guide</span>
+    <div class="done">Done when: the AI can read from one of your real tools.</div>
+    <p class="key"><b>Key takeaway:</b> every tool you connect is a hand the system grows. Connect on demand.</p>
+  </div>
+
+  <div class="lesson" id="l7">
+    <p><span class="lnum">Lesson 7</span><span class="vid">video</span></p>
+    <h2>The data architecture</h2>
+    <p class="out">Outcome: you know where every kind of thing lives, what is the master, and how to never lose data.</p>
+    <p>This is the lesson most people skip and later regret. Every piece of data has one of three roles. The <b>master</b> is the real, true copy. A <b>copy</b> is a working version you can edit freely. A <b>cache</b> is throwaway, something you can always regenerate. The whole trick is knowing which is which, so you never destroy the only real copy of something.</p>
+    <p>Here is the map you are setting up. GitHub is your master. Your computer is a working copy. Your databases and notes are a cache or a system of record. The cloud (Google Drive, Dropbox) is cold storage. And the discipline that ties it together: never move or delete the only copy of anything. Copy it, confirm it landed, then remove the original.</p>
+    <p>One specific trap, because it is the most common: never keep your working folder inside iCloud Drive. iCloud swaps your files for tiny placeholders to save space, and that silently breaks git, your tools, and the AI's ability to read your files. Home folder only.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Fill in the data-architecture map template below for your setup.</li>
+      <li>Name your master for each kind of thing (files, money data, content data).</li>
+      <li>Adopt the one discipline: copy, verify, then delete. Never delete the only copy.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · data-architecture map template</span>
+    <div class="done">Done when: you can point to the master for every kind of data you own, and nothing critical lives only in iCloud.</div>
+    <p class="key"><b>Key takeaway:</b> most people lose work because they never decided what the master is. You just did.</p>
+  </div>
+
+  <div class="lesson" style="border-bottom:1px solid var(--line)">
+    <h3 style="color:var(--muted)">What you walk away with</h3>
+    <p>A real home base: one tidy, version-controlled workspace, connected to your tools, with a rule book the AI follows and a clear map of where everything lives. The empty house, built right. Next you move in.</p>
+  </div>
+
+  <a class="next" href="index.html"><span>next</span><b>Module 02 · Second brain &rarr;</b> teach it who you are and what your business is</a>
+
+  <footer>Module 01 · Foundation. A living curriculum, one module at a time.</footer>
+
+</div>
+</body>
+</html>
