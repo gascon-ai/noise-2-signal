@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sales Operations · module 06</title>
+<style>
+  :root{
+    --bg:#0d0e11; --surface:#16181d; --surface2:#1d2026; --line:#2a2e36;
+    --text:#ece9e2; --muted:#9b9a93; --gold:#d4a04a; --teal:#1d9e75;
+    --radius:14px; --maxw:780px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .back{display:inline-block;color:var(--muted);font-size:14px;text-decoration:none;margin:32px 0 0}
+  .back:hover{color:var(--text)}
+  header{padding:18px 0 24px;border-bottom:1px solid var(--line)}
+  .kicker{color:var(--gold);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px}
+  h1{font-size:38px;font-weight:600;margin:0 0 12px;letter-spacing:-.01em}
+  .lede{color:var(--muted);font-size:18px;margin:0 0 18px}
+  .meta{display:flex;gap:14px;flex-wrap:wrap}
+  .chip{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;font-size:14px;color:var(--muted)}
+  .chip b{color:var(--text);font-weight:500}
+  .toc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin:24px 0}
+  .toc p{margin:0 0 8px;color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+  .toc ol{margin:0;padding-left:20px}
+  .toc li{margin:4px 0}
+  .toc a{color:var(--text);text-decoration:none}
+  .toc a:hover{color:var(--gold)}
+  .lesson{border-top:1px solid var(--line);padding:28px 0 4px}
+  .lnum{color:var(--gold);font-size:13px;font-weight:600}
+  .vid{color:var(--muted);font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;margin-left:8px}
+  h2{font-size:24px;font-weight:600;margin:6px 0 4px;letter-spacing:-.01em}
+  .out{color:var(--muted);font-size:15px;margin:0 0 14px}
+  h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:20px 0 8px}
+  p{font-size:16px;margin:0 0 12px}
+  ol,ul{font-size:16px;padding-left:22px;margin:0 0 12px}
+  li{margin:0 0 7px}
+  .blocks li b{color:var(--text)}
+  .quote{background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;margin:12px 0;font-size:15px;color:var(--text)}
+  .quote b{color:var(--gold)}
+  .dl{display:inline-block;background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:8px 13px;font-size:14px;color:var(--text);margin:2px 0}
+  .dl b{color:var(--gold)}
+  .done{background:var(--surface2);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:0 var(--radius) var(--radius) 0;padding:12px 16px;margin:14px 0;font-size:15px}
+  .key{color:var(--text);font-size:15px;margin:10px 0 4px}
+  .key b{color:var(--gold)}
+  .next{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin:30px 0;color:var(--text);text-decoration:none}
+  .next span{color:var(--muted);font-size:13px;display:block;margin-bottom:2px}
+  .next b{color:var(--gold);font-weight:600}
+  footer{padding:40px 0 70px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="index.html">&larr; back to the map</a>
+
+  <header>
+    <p class="kicker">module 06 · the departments</p>
+    <h1>Sales Operations</h1>
+    <p class="lede">Convert. The replies are coming in. The AI runs the operations, the pipeline, the follow-up, the notes, the scheduling, so you only do the part that closes. The handshake.</p>
+    <div class="meta">
+      <div class="chip"><b>Outcome</b> · every lead tracked, every follow-up fired, every call captured, so you walk into each conversation ready to close and nothing slips</div>
+      <div class="chip"><b>One video per lesson</b></div>
+    </div>
+  </header>
+
+  <div class="toc">
+    <p>In this module</p>
+    <ol>
+      <li><a href="#l1">The pipeline</a></li>
+      <li><a href="#l2">Follow-up that never drops</a></li>
+      <li><a href="#l3">Capture every call</a></li>
+      <li><a href="#l4">Proposals</a></li>
+      <li><a href="#l5">Scheduling</a></li>
+    </ol>
+  </div>
+
+  <div class="lesson" id="l1">
+    <p><span class="lnum">Lesson 6.1</span><span class="vid">video</span></p>
+    <h2>The pipeline</h2>
+    <p class="out">Outcome: one CRM where every lead sits in a named stage, so you can see your whole deal flow at a glance and nothing falls through a crack.</p>
+    <p>Content and Outreach fill the top. Now those replies have to land somewhere. If they live in your inbox, you are running sales on memory, and memory loses deals. The fix is one place where every lead has a stage, and a stage is just a column: new, contacted, call booked, proposal out, won, lost.</p>
+    <p>Pick one CRM and commit. GHL if you want the full kit under one roof, Close if you want a lean sales tool that just works. Then Claude Code wires it: it talks to your CRM, creates the pipeline, and drops every reply in as a lead in the right stage. No more leads hiding in three inboxes.</p>
+    <div class="quote"><b>Prompt:</b> Build my sales pipeline in the CRM. Stages: new, contacted, call booked, proposal sent, won, lost. When a reply comes in from outreach, create the lead and place it in contacted. Show me everything sitting in each stage.</div>
+    <h3>Do this</h3>
+    <ol>
+      <li>Pick your CRM, GHL or Close, and connect it to Claude Code.</li>
+      <li>Have it build the pipeline with your stages.</li>
+      <li>Route replies in as leads so every conversation has a home.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the pipeline setup</span>
+    <div class="done">Done when: you can open one board and see every live deal and exactly where it stands.</div>
+    <p class="key"><b>Key takeaway:</b> a deal you cannot see is a deal you will forget. One CRM, every lead in a stage, full visibility.</p>
+  </div>
+
+  <div class="lesson" id="l2">
+    <p><span class="lnum">Lesson 6.2</span><span class="vid">video</span></p>
+    <h2>Follow-up that never drops</h2>
+    <p class="out">Outcome: the system chases on schedule, so a busy week never costs you a deal.</p>
+    <p>Most deals are lost to silence, not to no. Someone says "circle back next week" and next week you are buried, so you never circle back. The money was on the table and you let it cool. A machine does not get buried. It follows up on the day it said it would, every time.</p>
+    <p>Set the cadence once: day two, day five, day twelve, then a clean breakup. The CRM workflow fires the touches and surfaces the ones that need your actual words. You stay human where it counts and let the schedule carry the rest.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Write your follow-up cadence: the timing and the message for each touch.</li>
+      <li>Have Claude build it as a workflow in your CRM, tied to the lead's stage.</li>
+      <li>Add a breakup message so dead leads close themselves instead of lingering.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the follow-up sequence</span>
+    <div class="done">Done when: a lead who goes quiet gets chased on schedule without you remembering to do it.</div>
+    <p class="key"><b>Key takeaway:</b> the deal is usually still alive. The follow-up just died. Automate the chase and you stop leaving money on the table.</p>
+  </div>
+
+  <div class="lesson" id="l3">
+    <p><span class="lnum">Lesson 6.3</span><span class="vid">video</span></p>
+    <h2>Capture every call</h2>
+    <p class="out">Outcome: every sales call recorded, transcribed, and summarized, with the notes and action items landing in the CRM on their own.</p>
+    <p>Scribbling notes mid-call splits your attention, and the prospect feels it. Hand that job to a recorder. Fathom or Krisp sits on the call, records it, transcribes it, and hands you a clean summary with the action items already pulled out. You stay fully present in the conversation. The memory layer runs underneath you.</p>
+    <p>Then close the loop. Claude Code reads the summary, writes the recap and next steps into the lead's record, and moves the stage if the call changed things. The call becomes pipeline data automatically, so the next touch already knows what was said.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Put Fathom or Krisp on every sales call so it records and summarizes.</li>
+      <li>Wire the summary to flow into the CRM as a note on that lead.</li>
+      <li>Have Claude pull the action items and update the stage from the recap.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the call-capture wiring</span>
+    <div class="done">Done when: you finish a call and the notes and next steps are already in the CRM without you typing them.</div>
+    <p class="key"><b>Key takeaway:</b> be present on the call, not transcribing it. Let the recorder catch every word and file it where the next step lives.</p>
+  </div>
+
+  <div class="lesson" id="l4">
+    <p><span class="lnum">Lesson 6.4</span><span class="vid">video</span></p>
+    <h2>Proposals</h2>
+    <p class="out">Outcome: a discovery call becomes a proposal in your voice, with the offer and the numbers, in minutes.</p>
+    <p>The proposal is where deals stall, not because it is hard, but because it is friction. You finish a great call, then a blank document waits for an hour you do not have, and the prospect cools while you stare at it. Kill the blank page. The call already holds everything the proposal needs.</p>
+    <p>Feed Claude the call summary and your proposal template. It pulls their goals and pains straight from the transcript, drops in the right offer and price, and writes it in your voice, the one you locked in Second brain. You read it, fix a line, send it the same day while the call is still warm.</p>
+    <div class="quote"><b>Prompt:</b> Here is the summary of my discovery call and my proposal template. Write the proposal: pull their goals and pain from the call, recommend the offer that fits, fill in the scope and price, and write it in my voice. Flag anything you had to assume.</div>
+    <h3>Do this</h3>
+    <ol>
+      <li>Build one proposal template with your offers and pricing.</li>
+      <li>Feed it the call summary and have Claude draft the proposal.</li>
+      <li>Read, fix the one line it got wrong, and send same day.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the proposal builder</span>
+    <div class="done">Done when: you turn a discovery call into a sent proposal in minutes, in your words.</div>
+    <p class="key"><b>Key takeaway:</b> speed closes. Send the proposal while the call is still warm, and let the AI kill the blank page.</p>
+  </div>
+
+  <div class="lesson" id="l5">
+    <p><span class="lnum">Lesson 6.5</span><span class="vid">video</span></p>
+    <h2>Scheduling</h2>
+    <p class="out">Outcome: two booking links that fill your calendar without a single round of "does Tuesday work for you."</p>
+    <p>The back-and-forth to set a time is its own deal-killer. Every email trading slots is a chance for the lead to go cold. Replace it with a link. They pick a time that is genuinely open, it lands on your calendar with a video link, and the dance never happens.</p>
+    <p>Run two links, not one, so the right call gets the right length. A short pre-discovery, Coffee and Context, around twenty minutes, to qualify and warm up. And a longer Working Session, around an hour, for the real strategy and the close. Put the short link in your outreach and the long link in your follow-up, and the calendar fills with the right conversations.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Set up two booking links: a short pre-discovery and a longer working session.</li>
+      <li>Connect them to your calendar so they only show real open time.</li>
+      <li>Drop the short link into outreach and the long link into follow-up.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the booking-page setup</span>
+    <div class="done">Done when: leads book themselves into the right call length and your calendar fills with no back-and-forth.</div>
+    <p class="key"><b>Key takeaway:</b> two links, two lengths, zero scheduling emails. The right call gets booked while you sleep.</p>
+  </div>
+
+  <div class="lesson" style="border-bottom:1px solid var(--line)">
+    <h3 style="color:var(--muted)">What you walk away with</h3>
+    <p>A sales department that runs itself up to the moment of truth. Every lead sits in a stage, follow-ups fire on schedule, every call records itself into the CRM, proposals go out same-day in your voice, and your calendar fills from two booking links. The operations run on their own, so the only thing left for you is the part no machine can do. The handshake. Next you keep the clients you close.</p>
+  </div>
+
+  <a class="next" href="client-success.html"><span>next</span><b>Module 07 · Client Success &rarr;</b> deliver and retain. onboarding, fulfillment, check-ins, renewals</a>
+
+  <footer>Module 06 · Sales Operations. A living curriculum, one module at a time.</footer>
+
+</div>
+</body>
+</html>

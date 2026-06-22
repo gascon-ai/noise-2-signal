@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Content · module 04</title>
+<style>
+  :root{
+    --bg:#0d0e11; --surface:#16181d; --surface2:#1d2026; --line:#2a2e36;
+    --text:#ece9e2; --muted:#9b9a93; --gold:#d4a04a; --teal:#1d9e75;
+    --radius:14px; --maxw:780px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .back{display:inline-block;color:var(--muted);font-size:14px;text-decoration:none;margin:32px 0 0}
+  .back:hover{color:var(--text)}
+  header{padding:18px 0 24px;border-bottom:1px solid var(--line)}
+  .kicker{color:var(--gold);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px}
+  h1{font-size:38px;font-weight:600;margin:0 0 12px;letter-spacing:-.01em}
+  .lede{color:var(--muted);font-size:18px;margin:0 0 18px}
+  .meta{display:flex;gap:14px;flex-wrap:wrap}
+  .chip{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;font-size:14px;color:var(--muted)}
+  .chip b{color:var(--text);font-weight:500}
+  .toc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin:24px 0}
+  .toc p{margin:0 0 8px;color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+  .toc ol{margin:0;padding-left:20px}
+  .toc li{margin:4px 0}
+  .toc a{color:var(--text);text-decoration:none}
+  .toc a:hover{color:var(--gold)}
+  .lesson{border-top:1px solid var(--line);padding:28px 0 4px}
+  .lnum{color:var(--gold);font-size:13px;font-weight:600}
+  .vid{color:var(--muted);font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;margin-left:8px}
+  h2{font-size:24px;font-weight:600;margin:6px 0 4px;letter-spacing:-.01em}
+  .out{color:var(--muted);font-size:15px;margin:0 0 14px}
+  h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:20px 0 8px}
+  p{font-size:16px;margin:0 0 12px}
+  ol,ul{font-size:16px;padding-left:22px;margin:0 0 12px}
+  li{margin:0 0 7px}
+  .blocks li b{color:var(--text)}
+  .quote{background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;margin:12px 0;font-size:15px;color:var(--text)}
+  .quote b{color:var(--gold)}
+  .dl{display:inline-block;background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:8px 13px;font-size:14px;color:var(--text);margin:2px 0}
+  .dl b{color:var(--gold)}
+  .done{background:var(--surface2);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:0 var(--radius) var(--radius) 0;padding:12px 16px;margin:14px 0;font-size:15px}
+  .key{color:var(--text);font-size:15px;margin:10px 0 4px}
+  .key b{color:var(--gold)}
+  .next{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin:30px 0;color:var(--text);text-decoration:none}
+  .next span{color:var(--muted);font-size:13px;display:block;margin-bottom:2px}
+  .next b{color:var(--gold);font-weight:600}
+  footer{padding:40px 0 70px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="index.html">&larr; back to the map</a>
+
+  <header>
+    <p class="kicker">module 04 · the departments</p>
+    <h1>Content</h1>
+    <p class="lede">The first department. Attract, inbound. One content engine with eight seats, wired into a closed loop where what you learned from last week's posts feeds what you make next week. The system runs the machine. You stay the talent.</p>
+    <div class="meta">
+      <div class="chip"><b>Outcome</b> · a content engine that finds the topic, scripts it in your voice, fact-checks it, ships it everywhere, and learns from what landed</div>
+      <div class="chip"><b>One video per lesson</b></div>
+    </div>
+  </header>
+
+  <div class="toc">
+    <p>In this module</p>
+    <ol>
+      <li><a href="#l1">The eight-seat loop</a></li>
+      <li><a href="#l2">Discover and source</a></li>
+      <li><a href="#l3">Research and verify</a></li>
+      <li><a href="#l4">Ideate</a></li>
+      <li><a href="#l5">Produce</a></li>
+      <li><a href="#l6">Check</a></li>
+      <li><a href="#l7">Distribute</a></li>
+      <li><a href="#l8">Learn and design</a></li>
+    </ol>
+  </div>
+
+  <div class="lesson" id="l1">
+    <p><span class="lnum">Lesson 4.1</span><span class="vid">video</span></p>
+    <h2>The eight-seat loop</h2>
+    <p class="out">Outcome: the map of the whole engine, and why it compounds instead of just running.</p>
+    <p>Foundation built the empty house. Second brain furnished it. Power features gave it hands. Now the business stands up its first function, and content is where most owners start, because attention is the cheapest lead you will ever buy.</p>
+    <p>The engine has eight seats, and they run in order, like a line in a kitchen. Each one hands its work to the next.</p>
+    <ul class="blocks">
+      <li><b>Discover.</b> Find what is trending and worth saying this week.</li>
+      <li><b>Source.</b> Pull from a vetted library so you never start cold.</li>
+      <li><b>Research.</b> Go deep on the topic and kill anything you cannot back up.</li>
+      <li><b>Ideate.</b> Turn one topic into many angles and hooks.</li>
+      <li><b>Produce.</b> Script it in your voice and build the visuals.</li>
+      <li><b>Check.</b> The fact-gate. Nothing ships unverified.</li>
+      <li><b>Distribute.</b> Push it to every platform from one source.</li>
+      <li><b>Learn.</b> Score what landed and feed the winners back in.</li>
+    </ul>
+    <p>Here is the part that matters. Learn does not end the line, it loops it back to Discover. What worked last week becomes the input for what you make next week. A line that ends is a treadmill. A line that loops is a flywheel, and the flywheel is the whole point.</p>
+    <p>Under the seats sits the plumbing: a Supabase database that holds every post and its numbers, an Instagram scraper that watches the market, a hook database of patterns that already work, and competitor tracking that tells you what your rivals are landing. The seats do the work. The plumbing remembers it.</p>
+    <span class="dl"><b>Download</b> · the content-engine map</span>
+    <div class="done">Done when: you can name all eight seats and point to where Learn feeds back into Discover.</div>
+    <p class="key"><b>Key takeaway:</b> eight seats, one loop. The system runs the machine so you stay the talent, and because it learns, every cycle is sharper than the last.</p>
+  </div>
+
+  <div class="lesson" id="l2">
+    <p><span class="lnum">Lesson 4.2</span><span class="vid">video</span></p>
+    <h2>Discover and source</h2>
+    <p class="out">Outcome: a curated short list of topics worth filming this week, scored against your pillars, plus a swipe file so you never face a blank page.</p>
+    <p>Seat one is discovery. A daily researcher scrapes what is trending live, right now, across X, Reddit, GitHub, the web, and YouTube. It does not just collect links. It reads each result and scores it against your content pillars, your audience, and how filmable it actually is, then hands you a ranked Top 10 instead of a firehose.</p>
+    <p>Seat two is source. Trends are spiky. Some weeks the feed is thin. So you keep a vetted source library, your own swipe file of evergreen angles, proven formats, and references you trust. When discovery comes up dry, you pull from the shelf. You never start from nothing.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Run the daily researcher each morning and read the scored Top 10.</li>
+      <li>Pick the two or three that fit your pillars and save them to the pipeline.</li>
+      <li>When a topic is thin, pull a backup from the source library.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the daily-content-researcher skill</span>
+    <div class="done">Done when: you open the morning with a ranked list of topics, not a blank page.</div>
+    <p class="key"><b>Key takeaway:</b> discovery scores the market for you, source covers the dry days. You are choosing from a menu, never inventing from scratch.</p>
+  </div>
+
+  <div class="lesson" id="l3">
+    <p><span class="lnum">Lesson 4.3</span><span class="vid">video</span></p>
+    <h2>Research and verify</h2>
+    <p class="out">Outcome: a topic you have gone deep on, with every claim backed and every fabrication killed before it reaches a script.</p>
+    <p>A trending topic is a headline, not a take. Before you film, you go deep, and you do it from three sources at once.</p>
+    <ul class="blocks">
+      <li><b>The web.</b> Deep-research fans out a wave of searches, fetches the sources, and fact-checks each claim against them. It comes back with a cited brief, not a guess.</li>
+      <li><b>Your audience.</b> Mine-comments pulls the real language from YouTube comments, the exact words people use for the pain. That language is your hook.</li>
+      <li><b>Your own calls.</b> Mine-calls reads your sales calls and meetings for what clients actually said. Nobody else has this. It is the one source your competitors cannot copy.</li>
+    </ul>
+    <p>This seat has a second job, and it is the important one. AI invents confident, wrong facts. You kill them here, before they get dressed up in a good script and become impossible to spot. A fabricated stat in a draft is a problem. A fabricated stat in a posted video is your reputation.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Run deep-research on the topic and read the cited brief.</li>
+      <li>Mine comments and your own calls for the language and the real objections.</li>
+      <li>Flag every claim you cannot trace to a source. Cut it or back it.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the research skill family</span>
+    <div class="done">Done when: every claim in your notes has a source, and the audience's own words are sitting in front of you.</div>
+    <p class="key"><b>Key takeaway:</b> research is where you earn the right to speak. Verify before you script, because a lie is cheaper to kill here than anywhere downstream.</p>
+  </div>
+
+  <div class="lesson" id="l4">
+    <p><span class="lnum">Lesson 4.4</span><span class="vid">video</span></p>
+    <h2>Ideate</h2>
+    <p class="out">Outcome: one researched topic turned into many filmable variations, each with a proven hook, each mapped to a pillar.</p>
+    <p>One good topic is not one piece of content. It is five or ten. Seat four is where you multiply.</p>
+    <p>Content-ideator takes the topic and spins it into variations: different angles, different formats, different promises, all pointed at the same idea. Then hook-generator hands each one an opening built from patterns that already work, drawn from your hook database, not invented on the spot. Every variation gets tagged to one of your content pillars, so you can see your coverage at a glance and stop overfeeding the same lane.</p>
+    <p>The hook is the whole game on short-form. A weak first line buries a strong idea. This is why the hook database earns its seat: it is the difference between an opening you hope works and one that already has.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Feed the researched topic to content-ideator and get your variations.</li>
+      <li>Run hook-generator on each one and keep the strongest opener.</li>
+      <li>Map each variation to a pillar and drop them into the pipeline.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the hook generator</span>
+    <div class="done">Done when: one topic has become several filmable angles, each with a hook you would actually open with.</div>
+    <p class="key"><b>Key takeaway:</b> one topic, many shots on goal. The ideator gives you the angles, the hook database gives you openers that already win.</p>
+  </div>
+
+  <div class="lesson" id="l5">
+    <p><span class="lnum">Lesson 4.5</span><span class="vid">video</span></p>
+    <h2>Produce</h2>
+    <p class="out">Outcome: a finished script in your voice and the visuals to carry it, thumbnails, b-roll, motion, all built without a studio.</p>
+    <p>Seat five is where the idea becomes a real thing. Two halves: the words, then the visuals.</p>
+    <h3>The words</h3>
+    <p>Content-scripter writes the full script in your voice, using the research and the hook from the seats before it. Because it reads your soul file and your voice file from Second brain, the draft already sounds like you. For carousels, carousel-creator builds the slides, headline to CTA, one record to a finished deck.</p>
+    <h3>The visuals</h3>
+    <p>This is the production stack, and it is the part that used to need a team.</p>
+    <ul class="blocks">
+      <li><b>Image generation.</b> Thumbnails, covers, and assets on demand, on brand.</li>
+      <li><b>Video generation.</b> B-roll and short clips you would otherwise have to shoot.</li>
+      <li><b>Higgs Field AI.</b> Cinematic motion and effects, the camera moves and polish that make a clip look produced instead of posted.</li>
+    </ul>
+    <p>You are still the talent. The system is the crew. You bring the take and the point of view. It handles the script polish, the thumbnail, the b-roll, and the motion, so a one-person operation ships like a studio.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Run content-scripter on the picked variation and tighten the draft.</li>
+      <li>Generate the thumbnail and any b-roll the piece needs.</li>
+      <li>Add motion with Higgs Field where a static clip needs life.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the content-scripter and the production stack guide</span>
+    <div class="done">Done when: you have a script that sounds like you and the visuals to ship it, with no crew.</div>
+    <p class="key"><b>Key takeaway:</b> produce is the crew you do not have to hire. You stay the talent, the stack handles script, image, video, and motion.</p>
+  </div>
+
+  <div class="lesson" id="l6">
+    <p><span class="lnum">Lesson 4.6</span><span class="vid">video</span></p>
+    <h2>Check</h2>
+    <p class="out">Outcome: a gate every piece passes through, so nothing ships with a wrong claim or off-brand voice.</p>
+    <p>This is the shortest seat and the one you never skip. Research verified the topic. Check verifies the finished piece, after scripting and editing, because new claims sneak in during production and a clean voice drifts.</p>
+    <p>A linter runs the draft against two things: the claims, traced back to your sources, and your house style, the banned words and voice rules from Second brain. Anything unverified or off-voice gets flagged before it leaves the building. Speed is the trap with content, and the fact-gate is what lets you move fast without shipping something you have to delete and apologize for.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Run the fact-gate on the finished script before anything is scheduled.</li>
+      <li>Trace every flagged claim. Back it or cut it.</li>
+      <li>Fix the voice flags, then release it to distribution.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the fact-gate</span>
+    <div class="done">Done when: every claim is sourced and the voice is clean, before a single thing is queued.</div>
+    <p class="key"><b>Key takeaway:</b> nothing ships unverified. The gate is cheap. A wrong claim in public is not.</p>
+  </div>
+
+  <div class="lesson" id="l7">
+    <p><span class="lnum">Lesson 4.7</span><span class="vid">video</span></p>
+    <h2>Distribute</h2>
+    <p class="out">Outcome: one source, many mouths. A finished piece pushed to every platform without re-uploading by hand.</p>
+    <p>You made it once. Now it goes everywhere. Seat seven is the distribution layer, and it is built so you publish in one move, not ten.</p>
+    <ul class="blocks">
+      <li><b>Post-content.</b> Pushes a finished video out to every connected platform in one call, captions and all.</li>
+      <li><b>Schedule-post.</b> Queues posts through Typefully so your calendar fills itself and things go out at the right time, not whenever you remember.</li>
+      <li><b>Carousels and the Dropbox pipeline.</b> Slide decks and the file handoff for anything that needs a human in the chain.</li>
+    </ul>
+    <p>This is the one-source, many-mouths rule made real. The work happens once, at the source. Distribution is just plumbing, and plumbing should not cost you an afternoon every time you post.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Send the finished video through post-content to your platforms.</li>
+      <li>Use schedule-post to queue the rest of the week through Typefully.</li>
+      <li>Confirm it landed everywhere it was supposed to.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the post-content and schedule-post skills</span>
+    <div class="done">Done when: one finished piece is live or queued across every platform, from a single action.</div>
+    <p class="key"><b>Key takeaway:</b> create once, distribute everywhere. The source is the work, the mouths are automatic.</p>
+  </div>
+
+  <div class="lesson" id="l8">
+    <p><span class="lnum">Lesson 4.8</span><span class="vid">video</span></p>
+    <h2>Learn and design</h2>
+    <p class="out">Outcome: the loop closes. What worked gets scored and fed back to Discover, and a design layer keeps everything on brand.</p>
+    <p>Seat eight is the one that turns the line into a flywheel. After things post, you do not move on, you measure.</p>
+    <ul class="blocks">
+      <li><b>Shortform-analysis.</b> Scores your own posts on hooks, formats, and engagement, and tells you what actually worked, not what you hoped would.</li>
+      <li><b>Competitor-analyst.</b> Reads what your rivals are landing and surfaces the gaps, the angles they own that you are missing.</li>
+    </ul>
+    <p>Both write back to the Supabase database, and the winners become next week's input for Discover. That is the loop closing. Your worst week still teaches the engine something, so the floor keeps rising on its own.</p>
+    <h3>The design layer</h3>
+    <p>Content that looks generic gets scrolled past. So the engine carries a design seat that runs alongside all eight.</p>
+    <ul class="blocks">
+      <li><b>Design-extract.</b> Pulls a brand's visual system, colors, type, spacing, into a profile the rest of the engine can build against.</li>
+      <li><b>Design-ux.</b> Builds on-brand pages and assets from that profile, so a landing page or a lead magnet looks made, not improvised.</li>
+    </ul>
+    <h3>Do this</h3>
+    <ol>
+      <li>Run shortform-analysis on the week's posts and read what landed.</li>
+      <li>Run competitor-analyst to find the gaps your rivals are filling.</li>
+      <li>Feed the winners back into Discover so next week starts ahead.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the analysis and design skills</span>
+    <div class="done">Done when: your top performers are scored, logged, and pointed back at Discover for the next cycle.</div>
+    <p class="key"><b>Key takeaway:</b> Learn closes the loop. A line that ends is work. A line that learns is a machine that gets better while you sleep.</p>
+  </div>
+
+  <div class="lesson" style="border-bottom:1px solid var(--line)">
+    <h3 style="color:var(--muted)">What you walk away with</h3>
+    <p>The first department, running. A content engine that finds the topic, backs it, scripts it in your voice, builds the visuals, gates the claims, ships it everywhere, and scores what landed, then feeds the winners back into the start. You are not the operator of this machine. You are the talent it runs around. Next you stand up the second department, and you point the same kind of system outward.</p>
+  </div>
+
+  <a class="next" href="outreach.html"><span>next</span><b>Module 05 · Outreach &rarr;</b> attract, outbound. the system runs the volume, you stay human in the reply.</a>
+
+  <footer>Module 04 · Content. A living curriculum, one module at a time.</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Client Success · module 07</title>
+<style>
+  :root{
+    --bg:#0d0e11; --surface:#16181d; --surface2:#1d2026; --line:#2a2e36;
+    --text:#ece9e2; --muted:#9b9a93; --gold:#d4a04a; --teal:#1d9e75;
+    --radius:14px; --maxw:780px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .back{display:inline-block;color:var(--muted);font-size:14px;text-decoration:none;margin:32px 0 0}
+  .back:hover{color:var(--text)}
+  header{padding:18px 0 24px;border-bottom:1px solid var(--line)}
+  .kicker{color:var(--gold);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px}
+  h1{font-size:38px;font-weight:600;margin:0 0 12px;letter-spacing:-.01em}
+  .lede{color:var(--muted);font-size:18px;margin:0 0 18px}
+  .meta{display:flex;gap:14px;flex-wrap:wrap}
+  .chip{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;font-size:14px;color:var(--muted)}
+  .chip b{color:var(--text);font-weight:500}
+  .toc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin:24px 0}
+  .toc p{margin:0 0 8px;color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+  .toc ol{margin:0;padding-left:20px}
+  .toc li{margin:4px 0}
+  .toc a{color:var(--text);text-decoration:none}
+  .toc a:hover{color:var(--gold)}
+  .lesson{border-top:1px solid var(--line);padding:28px 0 4px}
+  .lnum{color:var(--gold);font-size:13px;font-weight:600}
+  .vid{color:var(--muted);font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;margin-left:8px}
+  h2{font-size:24px;font-weight:600;margin:6px 0 4px;letter-spacing:-.01em}
+  .out{color:var(--muted);font-size:15px;margin:0 0 14px}
+  h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:20px 0 8px}
+  p{font-size:16px;margin:0 0 12px}
+  ol,ul{font-size:16px;padding-left:22px;margin:0 0 12px}
+  li{margin:0 0 7px}
+  .blocks li b{color:var(--text)}
+  .quote{background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;margin:12px 0;font-size:15px;color:var(--text)}
+  .quote b{color:var(--gold)}
+  .dl{display:inline-block;background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:8px 13px;font-size:14px;color:var(--text);margin:2px 0}
+  .dl b{color:var(--gold)}
+  .done{background:var(--surface2);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:0 var(--radius) var(--radius) 0;padding:12px 16px;margin:14px 0;font-size:15px}
+  .key{color:var(--text);font-size:15px;margin:10px 0 4px}
+  .key b{color:var(--gold)}
+  .next{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin:30px 0;color:var(--text);text-decoration:none}
+  .next span{color:var(--muted);font-size:13px;display:block;margin-bottom:2px}
+  .next b{color:var(--gold);font-weight:600}
+  footer{padding:40px 0 70px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="index.html">&larr; back to the map</a>
+
+  <header>
+    <p class="kicker">module 07 · the departments</p>
+    <h1>Client Success</h1>
+    <p class="lede">Deliver and retain. The hardest money to make is the second sale to the same client, except it is the easiest if delivery is clean. Onboarding, fulfillment, check-ins, and renewals, run like a system instead of a scramble.</p>
+    <div class="meta">
+      <div class="chip"><b>Outcome</b> · clients onboard the same way every time, the work ships on a cadence, and renewals close because the value is visible</div>
+      <div class="chip"><b>One video per lesson</b></div>
+    </div>
+  </header>
+
+  <div class="toc">
+    <p>In this module</p>
+    <ol>
+      <li><a href="#l1">Onboarding</a></li>
+      <li><a href="#l2">Fulfillment</a></li>
+      <li><a href="#l3">Check-ins</a></li>
+      <li><a href="#l4">Renewals</a></li>
+      <li><a href="#l5">Reporting</a></li>
+    </ol>
+  </div>
+
+  <div class="lesson" id="l1">
+    <p><span class="lnum">Lesson 7.1</span><span class="vid">video</span></p>
+    <h2>Onboarding</h2>
+    <p class="out">Outcome: a repeatable first two weeks. Welcome, access, kickoff, the first win, run the same way for every client.</p>
+    <p>A new client signs and then waits. That silence is where churn starts, before you have done a single thing wrong. The fix is a runbook: the same opening moves every time, so the client feels handled from day one and you are not improvising the most important week of the relationship.</p>
+    <p>The first two weeks have one job, the first win. Not the full deliverable, the first proof that hiring you was right. Get them one visible result fast and everything after that is easier.</p>
+    <h3>The runbook</h3>
+    <ul class="blocks">
+      <li><b>Welcome.</b> A same-day note that sets the tone and the timeline. The client knows what happens next and when.</li>
+      <li><b>Access.</b> The accounts you need, collected once, in a checklist, so you are not chasing logins for a week.</li>
+      <li><b>Kickoff.</b> One call, recorded in Fathom, where you align on the goal and the definition of done.</li>
+      <li><b>First win.</b> One concrete result inside two weeks. Small is fine. Visible is the point.</li>
+    </ul>
+    <h3>Do this</h3>
+    <ol>
+      <li>Open the new client's folder and drop in the onboarding runbook as its checklist.</li>
+      <li>Send the welcome note and the access request the same day they sign.</li>
+      <li>Book the kickoff, record it, and let Claude turn the notes into the first-win plan.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the onboarding runbook</span>
+    <div class="done">Done when: a new client hits the same clean opening every time, with a first win inside two weeks.</div>
+    <p class="key"><b>Key takeaway:</b> the most dangerous week is the first one. A runbook makes it boring, and boring is what keeps clients.</p>
+  </div>
+
+  <div class="lesson" id="l2">
+    <p><span class="lnum">Lesson 7.2</span><span class="vid">video</span></p>
+    <h2>Fulfillment</h2>
+    <p class="out">Outcome: the actual deliverable ships on a cadence, run on the departments you already built.</p>
+    <p>This is where most agencies leak. Delivery becomes a scramble: late nights, slipped dates, work that varies week to week because it depends on who had time. You already fixed this. The content engine from Module 04 and the outreach system from Module 05 are the machine. Fulfillment is just pointing that machine at a client and running it on a schedule.</p>
+    <p>The work ships on a cadence, not a scramble. Same day each week, same shape, same quality bar, because it runs on a system instead of a hero. The client gets a rhythm they can count on, and you get a week you can plan.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Map each client's deliverable to the department that produces it: content to the engine, outreach to Instantly and the sequences.</li>
+      <li>Set a fixed weekly cadence per client and put it on the calendar as a standing block.</li>
+      <li>Let Claude run the department on schedule and hand you the output to review before it goes out.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the fulfillment cadence</span>
+    <div class="done">Done when: every client has a fixed weekly cadence and the work ships without a fire drill.</div>
+    <p class="key"><b>Key takeaway:</b> fulfillment is not a new build. It is your existing departments, pointed at a client, on a clock.</p>
+  </div>
+
+  <div class="lesson" id="l3">
+    <p><span class="lnum">Lesson 7.3</span><span class="vid">video</span></p>
+    <h2>Check-ins</h2>
+    <p class="out">Outcome: scheduled touchpoints so a client never feels dropped, with the call notes pulled straight from Fathom.</p>
+    <p>Clients do not churn the week something breaks. They churn after weeks of quiet, when they start to wonder what they are paying for. A scheduled check-in kills that. It is a standing touchpoint, on the calendar, that says you are still here and still on it.</p>
+    <p>The trap is that check-ins create homework. You have to remember what was said last time, what you promised, what is still open. So you do not remember. Fathom recorded the call, and Claude pulls the summary, the action items, and the open threads into a tight prep sheet before you dial in.</p>
+    <div class="quote"><b>Prompt:</b> Pull the last two Fathom calls with this client. Give me what we agreed, what I owe them, and any concern they raised that is still open. Draft the check-in agenda from that.</div>
+    <h3>Do this</h3>
+    <ol>
+      <li>Set a recurring check-in cadence per client, monthly or biweekly, as a calendar series.</li>
+      <li>Before each one, have Claude read the Fathom history and fill the check-in template.</li>
+      <li>Run the call, then drop the new notes back so the next prep is already half done.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the check-in template</span>
+    <div class="done">Done when: every client has a standing check-in and you walk in already knowing every open thread.</div>
+    <p class="key"><b>Key takeaway:</b> a client never feels dropped when the touchpoint is on the calendar and the prep writes itself.</p>
+  </div>
+
+  <div class="lesson" id="l4">
+    <p><span class="lnum">Lesson 7.4</span><span class="vid">video</span></p>
+    <h2>Renewals</h2>
+    <p class="out">Outcome: a renewal pack per client. A snapshot, a personalized invite, an offer recommendation, and the call anchors, all generated from their results.</p>
+    <p>The renewal conversation goes one of two ways. Either you walk in cold, fumbling for what you actually did for them, or you walk in with the receipts. The pack is the receipts. Built from their own results, it makes the renewal an easy yes instead of an awkward ask.</p>
+    <ul class="blocks">
+      <li><b>The snapshot.</b> A 60-second picture of where they started and where they are now. The value, made undeniable.</li>
+      <li><b>The invite.</b> A personalized DM or note inviting them to the renewal call, written in their context, not a template.</li>
+      <li><b>The offer.</b> A recommendation, the right next tier or scope for this client, so you walk in with a proposal, not a question.</li>
+      <li><b>The anchors.</b> The two or three points the call should hit, pulled from what actually moved for them.</li>
+    </ul>
+    <h3>The receipt</h3>
+    <p>This is live. The Kettlebell Body renewal system reads a client's results and builds a 60-second snapshot and a tailored DM per client, the exact pack above, running on real clients before a real renewal call. The same skill, pointed at your clients, is this lesson.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>List who is inside the renewal window, 60 to 90 days from program end, or a few months into the engagement.</li>
+      <li>Run the renewal skill per client to generate the snapshot, invite, offer, and anchors from their results.</li>
+      <li>Send the invite, run the call off the anchors, and log the outcome.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the kbb-renewal skill</span>
+    <div class="done">Done when: every renewal call starts from a pack built on that client's own results, not from a blank page.</div>
+    <p class="key"><b>Key takeaway:</b> the second sale is the easiest sale when you walk in holding the proof. The pack builds the proof for you.</p>
+  </div>
+
+  <div class="lesson" id="l5">
+    <p><span class="lnum">Lesson 7.5</span><span class="vid">video</span></p>
+    <h2>Reporting</h2>
+    <p class="out">Outcome: a short, clear results update the client actually reads, so the value stays visible and the renewal is already half won.</p>
+    <p>Most client reports are too long, too late, and never opened. A wall of metrics no one reads does not prove value, it buries it. The fix is the opposite: short, clear, and on a rhythm. One update the client can scan in a minute and walk away thinking that was worth it.</p>
+    <p>Reporting is not a separate chore. The numbers already live in your departments: the content engine's Supabase, the campaign stats in Instantly, the pipeline in your CRM. Claude reads those and writes the update, so the report is a byproduct of the work, not a second job on top of it.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Pick the three numbers per client that actually prove the value. Cut the rest.</li>
+      <li>Have Claude pull those from Supabase, Instantly, and the CRM and fill the report template.</li>
+      <li>Send it on a fixed cadence, the same day each month, so the value is always fresh going into a renewal.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the client report template</span>
+    <div class="done">Done when: the client gets a short results update they actually read, on a fixed schedule.</div>
+    <p class="key"><b>Key takeaway:</b> the report is not a status dump. It is the renewal, sent early, in installments. Keep the value visible and the yes is already there.</p>
+  </div>
+
+  <div class="lesson" style="border-bottom:1px solid var(--line)">
+    <h3 style="color:var(--muted)">What you walk away with</h3>
+    <p>A retention machine. Clients onboard the same clean way every time, the work ships on a cadence run by the departments you already built, check-ins and reports keep the value in plain sight, and renewals close because you walk in holding the receipts. The hardest money to make becomes the easiest, because delivery is a system, not a scramble. Next you make sure the money itself is in order.</p>
+  </div>
+
+  <a class="next" href="finance.html"><span>next</span><b>Module 08 · Finance &rarr;</b> the money layer. invoicing, P&amp;L, categorization, the numbers in one place.</a>
+
+  <footer>Module 07 · Client Success. A living curriculum, one module at a time.</footer>
+
+</div>
+</body>
+</html>

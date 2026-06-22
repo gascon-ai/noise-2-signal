@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Productize · module 12</title>
+<style>
+  :root{
+    --bg:#0d0e11; --surface:#16181d; --surface2:#1d2026; --line:#2a2e36;
+    --text:#ece9e2; --muted:#9b9a93; --gold:#d4a04a; --teal:#1d9e75;
+    --radius:14px; --maxw:780px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .back{display:inline-block;color:var(--muted);font-size:14px;text-decoration:none;margin:32px 0 0}
+  .back:hover{color:var(--text)}
+  header{padding:18px 0 24px;border-bottom:1px solid var(--line)}
+  .kicker{color:var(--gold);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px}
+  h1{font-size:38px;font-weight:600;margin:0 0 12px;letter-spacing:-.01em}
+  .lede{color:var(--muted);font-size:18px;margin:0 0 18px}
+  .meta{display:flex;gap:14px;flex-wrap:wrap}
+  .chip{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;font-size:14px;color:var(--muted)}
+  .chip b{color:var(--text);font-weight:500}
+  .toc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin:24px 0}
+  .toc p{margin:0 0 8px;color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+  .toc ol{margin:0;padding-left:20px}
+  .toc li{margin:4px 0}
+  .toc a{color:var(--text);text-decoration:none}
+  .toc a:hover{color:var(--gold)}
+  .lesson{border-top:1px solid var(--line);padding:28px 0 4px}
+  .lnum{color:var(--gold);font-size:13px;font-weight:600}
+  .vid{color:var(--muted);font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;margin-left:8px}
+  h2{font-size:24px;font-weight:600;margin:6px 0 4px;letter-spacing:-.01em}
+  .out{color:var(--muted);font-size:15px;margin:0 0 14px}
+  h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:20px 0 8px}
+  p{font-size:16px;margin:0 0 12px}
+  ol,ul{font-size:16px;padding-left:22px;margin:0 0 12px}
+  li{margin:0 0 7px}
+  .blocks li b{color:var(--text)}
+  .quote{background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;margin:12px 0;font-size:15px;color:var(--text)}
+  .quote b{color:var(--gold)}
+  .dl{display:inline-block;background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:8px 13px;font-size:14px;color:var(--text);margin:2px 0}
+  .dl b{color:var(--gold)}
+  .done{background:var(--surface2);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:0 var(--radius) var(--radius) 0;padding:12px 16px;margin:14px 0;font-size:15px}
+  .key{color:var(--text);font-size:15px;margin:10px 0 4px}
+  .key b{color:var(--gold)}
+  .next{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin:30px 0;color:var(--text);text-decoration:none}
+  .next span{color:var(--muted);font-size:13px;display:block;margin-bottom:2px}
+  .next b{color:var(--gold);font-weight:600}
+  footer{padding:40px 0 70px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="index.html">&larr; back to the map</a>
+
+  <header>
+    <p class="kicker">module 12 · capstone</p>
+    <h1>Productize</h1>
+    <p class="lede">The system runs your business. Now turn it into something you sell. Package the whole stack into an offer, then install it for others the same way every time, so onboarding a client is running a runbook, not reinventing the build.</p>
+    <div class="meta">
+      <div class="chip"><b>Outcome</b> · a named, priced offer built on your own system, plus a repeatable install you can run for any client</div>
+      <div class="chip"><b>One video per lesson</b></div>
+    </div>
+  </header>
+
+  <div class="toc">
+    <p>In this module</p>
+    <ol>
+      <li><a href="#l1">Positioning</a></li>
+      <li><a href="#l2">The offer</a></li>
+      <li><a href="#l3">Build and sell</a></li>
+      <li><a href="#l4">Install for clients</a></li>
+    </ol>
+  </div>
+
+  <div class="lesson" id="l1">
+    <p><span class="lnum">Lesson 12.1</span><span class="vid">video</span></p>
+    <h2>Positioning</h2>
+    <p class="out">Outcome: one sentence that says who this is for and the one result it sells. Specific owner, specific outcome.</p>
+    <p>You built the whole thing for yourself. That is the unfair advantage. You are not selling AI consulting, you are selling the exact result you already have proof of. So you do not start with the product. You start with the person and the outcome.</p>
+    <p>"AI consulting" is dead on arrival. Nobody wants AI. They want their inbox handled, their content shipped, their leads followed up. Name the owner who has the pain you already solved, and name the one thing they get.</p>
+    <div class="quote"><b>Prompt:</b> Here is my soul file, my department briefs, and my archive. Based on what I actually built and the results I have, who is the one type of owner this helps most, and what is the single outcome they would pay for. Give me three positioning sentences in the format: I help [who] [get one outcome] without [the pain they expect].</div>
+    <p>Pick one. A real estate broker who wants 30 days of content without writing it. A founder who wants every lead followed up the same day without a hire. Specific beats clever. The narrower the owner, the easier the yes.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Feed the system your own briefs and results, and run the positioning prompt.</li>
+      <li>Choose the one owner and the one outcome you can prove.</li>
+      <li>Write it as a single sentence you can say out loud without flinching.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the positioning worksheet</span>
+    <div class="done">Done when: you can say who it is for and the one result, in one sentence, with no jargon.</div>
+    <p class="key"><b>Key takeaway:</b> you are not selling AI. You are selling a specific result to a specific owner, and you already have the receipts.</p>
+  </div>
+
+  <div class="lesson" id="l2">
+    <p><span class="lnum">Lesson 12.2</span><span class="vid">video</span></p>
+    <h2>The offer</h2>
+    <p class="out">Outcome: a named, scoped, priced offer with the value equation behind the number.</p>
+    <p>Positioning is who and what. The offer is how it is packaged and what it costs. Name it so it sounds like a thing, not a meeting. Scope it so both of you know where it ends. Price it on the value of the outcome, not the hours you put in.</p>
+    <h3>The four pieces</h3>
+    <ul class="blocks">
+      <li><b>Name.</b> Something that says the result. "The Content Engine install," not "AI services."</li>
+      <li><b>Scope.</b> The exact departments you stand up, what they hand over, and what they do not. Draw the line.</li>
+      <li><b>Price.</b> Anchored to the outcome. If it replaces a hire or a five-figure agency, price near that, not near your cost.</li>
+      <li><b>Proof.</b> The receipts from your own build. You ran it on yourself first. Show that.</li>
+    </ul>
+    <p>Run it through the value equation before you set the number. More dream outcome and more likelihood it works push the price up. Less time to result and less effort asked of them push it up too. Your system is strong on all four, because it already runs without you. Charge like it.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Name the offer after the result, not the toolset.</li>
+      <li>Write the scope as a short list of departments installed and what each delivers.</li>
+      <li>Set the price against the outcome, then pressure-test it with the value equation.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the offer builder</span>
+    <div class="done">Done when: you have a named offer, a one-page scope, and a price you can defend with the value equation.</div>
+    <p class="key"><b>Key takeaway:</b> name it, scope it, price it on outcome. The system already does the work, so the offer is just how you frame what it is worth.</p>
+  </div>
+
+  <div class="lesson" id="l3">
+    <p><span class="lnum">Lesson 12.3</span><span class="vid">video</span></p>
+    <h2>Build and sell</h2>
+    <p class="out">Outcome: the system markets and sells the very thing it is part of. The product is its own best demo.</p>
+    <p>Here is the loop that closes the course. You stood up a content department and an outreach department to run your business. Now you point them at selling the offer. The thing that sells the system is the system.</p>
+    <ul class="blocks">
+      <li><b>Content sells it.</b> The content engine ships build-in-public teardowns of what you actually shipped. Every post is a receipt. The proof is the product running in public.</li>
+      <li><b>Outreach sells it.</b> The outreach department books calls with the exact owner from your positioning. Instantly for cold email, your CRM for follow-up, all of it already built.</li>
+      <li><b>Sales closes it.</b> Fathom records the calls, the system drafts the recap and the proposal, and you do the handshake.</li>
+    </ul>
+    <p>This is the proof a prospect cannot argue with. You are not telling them a content engine works. They found you through yours. The funnel that sold them is the funnel they are buying.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Point the content department at the offer: teardowns of your real build, one receipt per post.</li>
+      <li>Aim the outreach department at the owner from Lesson 12.1.</li>
+      <li>Let the sales flow handle recap and proposal, and book the close.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the go-to-market plan</span>
+    <div class="done">Done when: a lead reaches you through the system, and the system books and closes the call.</div>
+    <p class="key"><b>Key takeaway:</b> the system markets itself. When the demo is the product running in public, you do not have to sell hard.</p>
+  </div>
+
+  <div class="lesson" id="l4">
+    <p><span class="lnum">Lesson 12.4</span><span class="vid">video</span></p>
+    <h2>Install for clients</h2>
+    <p class="out">Outcome: the whole stack packaged as a repeatable install, the same blocks in the same order, so onboarding is a runbook.</p>
+    <p>You built this once, for you, and it was a discovery. Doing it for a client should not be a discovery. It should be a runbook. Same foundation, same memory, same hands, same departments, in the same order, every time. The only thing that changes is whose business goes inside.</p>
+    <p>The receipt is right in front of you. This curriculum is that productized system. Foundation, second brain, the hands, the eight departments, the team, the harden pass, in order. That is the install. You are reading the runbook.</p>
+    <ul class="blocks">
+      <li><b>The same order.</b> Build the brain, give it hands, stand up departments, name the team, lock it down. You never reinvent the sequence.</li>
+      <li><b>Client soul file first.</b> Run the interview on them, not you. Their identity, their voice, their buckets. The blocks are fixed, the contents are theirs.</li>
+      <li><b>One module per session.</b> Onboarding becomes a schedule, not a scramble. Each block has a done-when, so you always know where you are.</li>
+    </ul>
+    <h3>Do this</h3>
+    <ol>
+      <li>Turn the module order into a numbered install checklist, one block per step.</li>
+      <li>Swap your soul-file interview for a client version, so the system learns them instead of you.</li>
+      <li>Run the first install against the runbook and time it. The second one is faster.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the install runbook</span>
+    <div class="done">Done when: onboarding a client is following the runbook top to bottom, not figuring it out again.</div>
+    <p class="key"><b>Key takeaway:</b> you already have the runbook. This curriculum is it. Install the same blocks in the same order, and only the owner changes.</p>
+  </div>
+
+  <div class="lesson" style="border-bottom:1px solid var(--line)">
+    <h3 style="color:var(--muted)">What you walk away with</h3>
+    <p>The whole thing, and a way to sell it. You built a second brain, gave it hands, stood up eight departments and a team to run them, locked it down, and turned it into an offer you can price and install. The system runs your business and now markets, sells, and reproduces itself, one runbook at a time. You did not buy a course. You built a business, then made it repeatable. Noise to signal.</p>
+  </div>
+
+  <a class="next" href="index.html"><span>next</span><b>Back to the map &rarr;</b> you built the whole thing. now run it, and sell it.</a>
+
+  <footer>Module 12 · Productize. A living curriculum, one module at a time.</footer>
+
+</div>
+</body>
+</html>

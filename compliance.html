@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Compliance · module 11</title>
+<style>
+  :root{
+    --bg:#0d0e11; --surface:#16181d; --surface2:#1d2026; --line:#2a2e36;
+    --text:#ece9e2; --muted:#9b9a93; --gold:#d4a04a; --teal:#1d9e75;
+    --radius:14px; --maxw:780px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .back{display:inline-block;color:var(--muted);font-size:14px;text-decoration:none;margin:32px 0 0}
+  .back:hover{color:var(--text)}
+  header{padding:18px 0 24px;border-bottom:1px solid var(--line)}
+  .kicker{color:var(--gold);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px}
+  h1{font-size:38px;font-weight:600;margin:0 0 12px;letter-spacing:-.01em}
+  .lede{color:var(--muted);font-size:18px;margin:0 0 18px}
+  .meta{display:flex;gap:14px;flex-wrap:wrap}
+  .chip{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;font-size:14px;color:var(--muted)}
+  .chip b{color:var(--text);font-weight:500}
+  .toc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin:24px 0}
+  .toc p{margin:0 0 8px;color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+  .toc ol{margin:0;padding-left:20px}
+  .toc li{margin:4px 0}
+  .toc a{color:var(--text);text-decoration:none}
+  .toc a:hover{color:var(--gold)}
+  .lesson{border-top:1px solid var(--line);padding:28px 0 4px}
+  .lnum{color:var(--gold);font-size:13px;font-weight:600}
+  .vid{color:var(--muted);font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;margin-left:8px}
+  h2{font-size:24px;font-weight:600;margin:6px 0 4px;letter-spacing:-.01em}
+  .out{color:var(--muted);font-size:15px;margin:0 0 14px}
+  h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:20px 0 8px}
+  p{font-size:16px;margin:0 0 12px}
+  ol,ul{font-size:16px;padding-left:22px;margin:0 0 12px}
+  li{margin:0 0 7px}
+  .blocks li b{color:var(--text)}
+  .quote{background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;margin:12px 0;font-size:15px;color:var(--text)}
+  .quote b{color:var(--gold)}
+  .dl{display:inline-block;background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:8px 13px;font-size:14px;color:var(--text);margin:2px 0}
+  .dl b{color:var(--gold)}
+  .done{background:var(--surface2);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:0 var(--radius) var(--radius) 0;padding:12px 16px;margin:14px 0;font-size:15px}
+  .key{color:var(--text);font-size:15px;margin:10px 0 4px}
+  .key b{color:var(--gold)}
+  .next{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin:30px 0;color:var(--text);text-decoration:none}
+  .next span{color:var(--muted);font-size:13px;display:block;margin-bottom:2px}
+  .next b{color:var(--gold);font-weight:600}
+  footer{padding:40px 0 70px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="index.html">&larr; back to the map</a>
+
+  <header>
+    <p class="kicker">module 11 · the departments</p>
+    <h1>Compliance</h1>
+    <p class="lede">Keep it safe and honest. This one comes last because it guards everything above it. The unsexy layer almost no course teaches: backups, data safety, the fact-gate, and a recovery runbook. This is what keeps a client paying and keeps you out of trouble.</p>
+    <div class="meta">
+      <div class="chip"><b>Outcome</b> · the system backs itself up, never destroys a file, never ships an unverified claim, and comes back in minutes if it breaks</div>
+      <div class="chip"><b>One video per lesson</b></div>
+    </div>
+  </header>
+
+  <div class="toc">
+    <p>In this module</p>
+    <ol>
+      <li><a href="#l1">Backups: the work backs itself up</a></li>
+      <li><a href="#l2">Data safety: the rules that prevent a disaster</a></li>
+      <li><a href="#l3">The fact-gate</a></li>
+      <li><a href="#l4">The recovery runbook</a></li>
+    </ol>
+  </div>
+
+  <div class="lesson" id="l1">
+    <p><span class="lnum">Lesson 11.1</span><span class="vid">video</span></p>
+    <h2>Backups: the work backs itself up</h2>
+    <p class="out">Outcome: every session syncs your whole setup, skills and memory included, to a private GitHub repo, so you can never lose the brain you built.</p>
+    <p>You have spent ten modules furnishing a second brain. Skills, memory files, briefs, the soul file. Now imagine the drive dies. If that work lives in one place, one bad day erases it. So you make the backup automatic and you stop thinking about it.</p>
+    <p>A hook does it. When a session ends, the hook commits your whole workspace, skills, memory, briefs and all, and pushes it to a private GitHub repo. No button to remember, no discipline to keep. The work backs itself up.</p>
+    <p>The receipt is this exact system. It runs on the backup hook. It once drifted, the local copy and the repo fell out of sync, and the fix was to harden the hook so it can never drift again. That is the difference between a backup you hope is running and one you have proven.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Create a private GitHub repo for your workspace.</li>
+      <li>Install the auto-backup hook so it commits and pushes at the end of every session.</li>
+      <li>Force a break. Change a file, end a session, and confirm the commit landed on GitHub.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the auto-backup hook</span>
+    <div class="done">Done when: you finish a session and a fresh commit shows up in your private repo without you touching git.</div>
+    <p class="key"><b>Key takeaway:</b> a backup you have to remember is not a backup. The hook makes it automatic, and the second brain survives a dead drive.</p>
+  </div>
+
+  <div class="lesson" id="l2">
+    <p><span class="lnum">Lesson 11.2</span><span class="vid">video</span></p>
+    <h2>Data safety: the rules that prevent a disaster</h2>
+    <p class="out">Outcome: a short set of standing rules that stop the AI from ever destroying a file, baked into your soul file so every session obeys them.</p>
+    <p>The AI is fast and it is willing. Tell it to clean up a folder and it will, including the parts you wanted kept. On a cloud drive, Dropbox or Google Drive or iCloud, a careless move or delete can trash the original and leave a zero-byte ghost in its place. Speed without rules is how you lose a year of work in one command.</p>
+    <h3>The rule that prevents most of it</h3>
+    <p>Never move or delete files straight on a cloud drive. Always copy, verify the copy is real and larger than zero, then delete the original. Copy, check, then remove. In that order, every time.</p>
+    <ul class="blocks">
+      <li><b>Copy first.</b> Get the file to its new home before anything happens to the old one.</li>
+      <li><b>Verify the copy.</b> Confirm it exists and has real size at the destination. No verify, no delete.</li>
+      <li><b>Then delete the original.</b> Only after the copy is proven. Through the cloud provider, never a raw delete on a synced mount.</li>
+    </ul>
+    <p>These are not suggestions you hope it remembers. They go in the soul file as hard rules, so every session inherits them, the same way Foundation taught it where things live.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Add the data-safety rules to your soul file as standing instructions.</li>
+      <li>Mark your cloud-synced folders by name so the AI knows where the rules bite hardest.</li>
+      <li>Test it. Ask it to reorganize a throwaway folder and watch it copy, verify, then delete.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the data-safety rules</span>
+    <div class="done">Done when: the AI refuses to move or delete on a cloud drive and copies, verifies, then removes instead.</div>
+    <p class="key"><b>Key takeaway:</b> copy, verify, then delete. One rule, written once into the soul file, is the seatbelt that prevents the disaster you would not survive.</p>
+  </div>
+
+  <div class="lesson" id="l3">
+    <p><span class="lnum">Lesson 11.3</span><span class="vid">video</span></p>
+    <h2>The fact-gate</h2>
+    <p class="out">Outcome: no claim, stat, or quote leaves the building unverified, across every department, not just content.</p>
+    <p>The genius with amnesia is also a confident guesser. It will invent a statistic that sounds right, attribute a quote to the wrong person, and state it all with a straight face. In content that costs you credibility. In a proposal or a client report it costs you the client.</p>
+    <p>You met the fact-gate in the content engine, the check seat that holds a draft against its sources before it ships. Here you promote it from a content step to a standing rule for the whole business. Every number, every quote, every "studies show" gets gated.</p>
+    <div class="quote"><b>Rule:</b> Before you state any fact, statistic, quote, or claim, verify it against a real source and cite it. If you cannot verify it, say so plainly and do not assert it. No claim ships unverified.</div>
+    <p>Put it in the soul file so it is always on, and lean on the tools you already have. Real sources beat a confident guess every time: a web search for a stat, the meeting transcript in Fathom for what a client actually said, your own archive for what you actually decided.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Add the fact-gate rule to your soul file as a business-wide standing instruction.</li>
+      <li>Tell it which sources count: live web for stats, Fathom for quotes, your archive for your own history.</li>
+      <li>Make it label anything it cannot verify, instead of asserting it.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the fact-gate</span>
+    <div class="done">Done when: the system flags an unverifiable claim and asks rather than inventing one.</div>
+    <p class="key"><b>Key takeaway:</b> no receipt, no claim. The same gate that protects your content now protects every word the business sends.</p>
+  </div>
+
+  <div class="lesson" id="l4">
+    <p><span class="lnum">Lesson 11.4</span><span class="vid">video</span></p>
+    <h2>The recovery runbook</h2>
+    <p class="out">Outcome: a one-page playbook that restores the whole system from scratch, so a broken machine is a minor inconvenience, not a crisis.</p>
+    <p>Backups only matter if you can come back from them. Most people have a backup somewhere and no idea how to restore it under pressure. So you write the playbook once, while nothing is on fire, and a dead laptop becomes a one-hour problem.</p>
+    <p>It is short on purpose. When something breaks you do not want to think, you want to follow steps.</p>
+    <ul class="blocks">
+      <li><b>Clone fresh from GitHub.</b> Your whole brain lives in the private repo from lesson 11.1. Pull it down to the new machine.</li>
+      <li><b>Re-auth the tools.</b> Reconnect Claude Code and your MCP tools, Notion, Slack, Stripe, Fathom, the connectors each department runs on.</li>
+      <li><b>Confirm and continue.</b> Open a bucket, check the brief loads and the skills run, and you are back to work in minutes.</li>
+    </ul>
+    <p>Keep the runbook in your admin bucket and treat it like a fire drill. The first time you follow it should not be the day the drive dies.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Write the runbook: clone from GitHub, re-auth the tools, verify, in plain steps.</li>
+      <li>List every tool you would need to reconnect, so nothing is missing under pressure.</li>
+      <li>Run the drill once on a spare machine or a clean folder and time it.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the recovery runbook</span>
+    <div class="done">Done when: you could rebuild your entire setup from a fresh machine in under an hour, following one page.</div>
+    <p class="key"><b>Key takeaway:</b> a backup you cannot restore is a souvenir. The runbook turns the worst day into a short one.</p>
+  </div>
+
+  <div class="lesson" style="border-bottom:1px solid var(--line)">
+    <h3 style="color:var(--muted)">What you walk away with</h3>
+    <p>A system you can trust. The work backs itself up to a private repo after every session, the AI copies and verifies before it ever deletes, no claim ships without a receipt, and a one-page runbook brings the whole thing back in minutes if a machine dies. The departments stand up, and now the guardrails keep them standing. Last, you package the whole system into something you sell.</p>
+  </div>
+
+  <a class="next" href="productize.html"><span>next</span><b>Module 12 · Productize &rarr;</b> package the whole system into an offer, then install it anywhere.</a>
+
+  <footer>Module 11 · Compliance. A living curriculum, one module at a time.</footer>
+
+</div>
+</body>
+</html>

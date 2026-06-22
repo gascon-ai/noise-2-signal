@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Admin · module 09</title>
+<style>
+  :root{
+    --bg:#0d0e11; --surface:#16181d; --surface2:#1d2026; --line:#2a2e36;
+    --text:#ece9e2; --muted:#9b9a93; --gold:#d4a04a; --teal:#1d9e75;
+    --radius:14px; --maxw:780px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .back{display:inline-block;color:var(--muted);font-size:14px;text-decoration:none;margin:32px 0 0}
+  .back:hover{color:var(--text)}
+  header{padding:18px 0 24px;border-bottom:1px solid var(--line)}
+  .kicker{color:var(--gold);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px}
+  h1{font-size:38px;font-weight:600;margin:0 0 12px;letter-spacing:-.01em}
+  .lede{color:var(--muted);font-size:18px;margin:0 0 18px}
+  .meta{display:flex;gap:14px;flex-wrap:wrap}
+  .chip{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;font-size:14px;color:var(--muted)}
+  .chip b{color:var(--text);font-weight:500}
+  .toc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin:24px 0}
+  .toc p{margin:0 0 8px;color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+  .toc ol{margin:0;padding-left:20px}
+  .toc li{margin:4px 0}
+  .toc a{color:var(--text);text-decoration:none}
+  .toc a:hover{color:var(--gold)}
+  .lesson{border-top:1px solid var(--line);padding:28px 0 4px}
+  .lnum{color:var(--gold);font-size:13px;font-weight:600}
+  .vid{color:var(--muted);font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;margin-left:8px}
+  h2{font-size:24px;font-weight:600;margin:6px 0 4px;letter-spacing:-.01em}
+  .out{color:var(--muted);font-size:15px;margin:0 0 14px}
+  h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:20px 0 8px}
+  p{font-size:16px;margin:0 0 12px}
+  ol,ul{font-size:16px;padding-left:22px;margin:0 0 12px}
+  li{margin:0 0 7px}
+  .blocks li b{color:var(--text)}
+  .quote{background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;margin:12px 0;font-size:15px;color:var(--text)}
+  .quote b{color:var(--gold)}
+  .dl{display:inline-block;background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:8px 13px;font-size:14px;color:var(--text);margin:2px 0}
+  .dl b{color:var(--gold)}
+  .done{background:var(--surface2);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:0 var(--radius) var(--radius) 0;padding:12px 16px;margin:14px 0;font-size:15px}
+  .key{color:var(--text);font-size:15px;margin:10px 0 4px}
+  .key b{color:var(--gold)}
+  .next{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin:30px 0;color:var(--text);text-decoration:none}
+  .next span{color:var(--muted);font-size:13px;display:block;margin-bottom:2px}
+  .next b{color:var(--gold);font-weight:600}
+  footer{padding:40px 0 70px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="index.html">&larr; back to the map</a>
+
+  <header>
+    <p class="kicker">module 09 · the departments</p>
+    <h1>Admin</h1>
+    <p class="lede">The connective tissue. Inbox, calendar, files, notes, tasks, the day-to-day between every department. None of it is the work. All of it eats the day. The system handles it so your attention goes back to the work.</p>
+    <div class="meta">
+      <div class="chip"><b>Outcome</b> · the busywork between departments runs itself, and you approve instead of do</div>
+      <div class="chip"><b>One video per lesson</b></div>
+    </div>
+  </header>
+
+  <div class="toc">
+    <p>In this module</p>
+    <ol>
+      <li><a href="#l1">Inbox</a></li>
+      <li><a href="#l2">Calendar</a></li>
+      <li><a href="#l3">Files</a></li>
+      <li><a href="#l4">Meeting notes</a></li>
+      <li><a href="#l5">Tasks</a></li>
+    </ol>
+  </div>
+
+  <div class="lesson" id="l1">
+    <p><span class="lnum">Lesson 9.1</span><span class="vid">video</span></p>
+    <h2>Inbox</h2>
+    <p class="out">Outcome: your inbox is read, sorted, and drafted before you open it, so you approve instead of compose.</p>
+    <p>Email is the tax you pay every morning. Most of it is reading and routing, not writing. So you hand the reading and routing to the system. Connect Gmail to Claude Code, and it reads the new threads, sorts the real from the noise, and drafts the replies that only need your yes.</p>
+    <p>It is not sending. It is teeing up. You walk in, scan a stack of drafts that already sound like you, and approve or tweak. The blank page is gone.</p>
+    <div class="quote"><b>Prompt:</b> Read my unread threads from the last day. Triage them into reply-now, FYI, and ignore. Label them. For each reply-now, draft a response in my voice and leave it as a draft. Do not send anything.</div>
+    <h3>Do this</h3>
+    <ol>
+      <li>Connect Gmail to Claude Code so it can read, label, and draft.</li>
+      <li>Set your triage rules: what counts as reply-now, what gets labeled, what gets left alone.</li>
+      <li>Run the triage prompt and review the drafts. Send the good ones, fix the rest.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the inbox triage setup</span>
+    <div class="done">Done when: you open Gmail to a sorted inbox and a stack of drafts, not a blank pile.</div>
+    <p class="key"><b>Key takeaway:</b> reading and routing is the real cost of email, not writing. Hand that to the system and you only spend attention where you actually add it.</p>
+  </div>
+
+  <div class="lesson" id="l2">
+    <p><span class="lnum">Lesson 9.2</span><span class="vid">video</span></p>
+    <h2>Calendar</h2>
+    <p class="out">Outcome: scheduling stops being a back-and-forth. The system reads your calendar, suggests times, and books.</p>
+    <p>Finding a time is a small task you do twenty times a week, and it adds up. Connect your calendar to Claude Code and it reads what is already on there, knows your real availability, and proposes times that fit how you actually want your days to run.</p>
+    <p>"Find me three slots next week for a 30-minute call, mornings only, none before 9." It checks, it suggests, you pick, it books. No flipping between tabs, no double-booking, no holding a grid in your head.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Connect your calendar to Claude Code so it can read events and create them.</li>
+      <li>Tell it your scheduling rules: working hours, buffers, no-meeting blocks, how you like your week shaped.</li>
+      <li>Hand it a real ask and let it suggest times, then confirm one and let it book.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the calendar wiring</span>
+    <div class="done">Done when: you ask for times in plain English and it books the one you pick.</div>
+    <p class="key"><b>Key takeaway:</b> the calendar should answer "when are you free" for you. Wire it once and scheduling stops being a tab you live in.</p>
+  </div>
+
+  <div class="lesson" id="l3">
+    <p><span class="lnum">Lesson 9.3</span><span class="vid">video</span></p>
+    <h2>Files</h2>
+    <p class="out">Outcome: the data architecture from Foundation, kept tidy on its own. One home per thing, named by the rule, nothing floating on the desktop.</p>
+    <p>Foundation built the file system. This keeps it clean without you babysitting it. The rule never changed: every file has exactly one home, named lowercase with hyphens, in the right bucket. The drift is what kills it, random downloads, stray screenshots, a desktop that slowly fills up.</p>
+    <p>So you let the system file. Hand it a loose file and it knows where that lives, names it by the rule, and puts it there. Point it at a messy folder and it sorts the pile. The architecture only pays off if it stays the architecture.</p>
+    <div class="quote"><b>Prompt:</b> Look at the files sitting on my desktop and in my downloads. For each one, tell me which bucket it belongs in and what it should be named by my rule. Then move them there. Flag anything you are unsure about instead of guessing.</div>
+    <h3>Do this</h3>
+    <ol>
+      <li>Point Claude Code at your desktop and downloads and let it sort the current pile.</li>
+      <li>Confirm the moves and correct any it got wrong, so it learns your edges.</li>
+      <li>Make filing the default: new file in, it goes to its one home named by the rule.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the file-system SOP</span>
+    <div class="done">Done when: your desktop is empty and you can name where any file lives without looking.</div>
+    <p class="key"><b>Key takeaway:</b> a file system is only as good as its upkeep. Let the system enforce the rule and the architecture stays an architecture instead of decaying into a junk drawer.</p>
+  </div>
+
+  <div class="lesson" id="l4">
+    <p><span class="lnum">Lesson 9.4</span><span class="vid">video</span></p>
+    <h2>Meeting notes</h2>
+    <p class="out">Outcome: every call is captured, and the notes plus action items land in your system overnight, without you touching it.</p>
+    <p>You should never take notes on a call again. Fathom and Krisp sit on your meetings and capture everything, the transcript, the summary, the action items. The recording is only half the job though. The notes are worthless if they sit in another app you forget to open.</p>
+    <p>So a daily routine closes the loop. While you sleep, it pulls yesterday's calls, drops the summaries where they belong, and files the action items into your task system. You wake up and the meeting already turned into next steps.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Run Fathom and Krisp on your calls so every meeting is captured automatically.</li>
+      <li>Connect them to Claude Code so it can read the transcripts and summaries.</li>
+      <li>Set a daily routine that syncs new meetings in overnight: summary to the right bucket, action items to your task system.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the meeting-notes sync</span>
+    <div class="done">Done when: you wake up and yesterday's calls are summarized and turned into tasks, with nothing you had to do.</div>
+    <p class="key"><b>Key takeaway:</b> capture is easy, the sync is the win. A nightly routine turns recordings you would forget into action items already on your list.</p>
+  </div>
+
+  <div class="lesson" id="l5">
+    <p><span class="lnum">Lesson 9.5</span><span class="vid">video</span></p>
+    <h2>Tasks</h2>
+    <p class="out">Outcome: one task system, fed from your notes, your inbox, and your calls, so nothing lives only in your head.</p>
+    <p>The thing that drops the ball is the task that never got written down. You have it in three places, or no place, or just a vague sense you owe someone something. The fix is one task system everything flows into. For you that is Notion, and the system is what keeps it fed.</p>
+    <p>An email that needs an action becomes a task. A line in a meeting summary becomes a task. A note you scribbled becomes a task. You stop being the one funnel everything has to pass through, and your head stops being the place tasks go to die.</p>
+    <div class="quote"><b>Prompt:</b> Pull action items from today's meeting summaries, my flagged emails, and any notes I added, and create a task in Notion for each one with a clear next step and a due date. Skip anything already on the list.</div>
+    <h3>Do this</h3>
+    <ol>
+      <li>Pick one task system and make it the only one. Notion is the default here.</li>
+      <li>Connect it to Claude Code so it can read tasks and create them.</li>
+      <li>Wire the feeds: emails, meeting summaries, and notes all flow in as tasks with a next step.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the task capture flow</span>
+    <div class="done">Done when: nothing you commit to lives only in your head. It is a task in Notion, fed automatically from where it came up.</div>
+    <p class="key"><b>Key takeaway:</b> one task system, fed from everywhere. The win is not the list, it is that you stop being the funnel everything has to pass through to get written down.</p>
+  </div>
+
+  <div class="lesson" style="border-bottom:1px solid var(--line)">
+    <h3 style="color:var(--muted)">What you walk away with</h3>
+    <p>The day-to-day runs itself. Your inbox is sorted and drafted, your calendar books without the back-and-forth, your files stay in their homes, your calls turn into notes and tasks overnight, and one task system holds everything you committed to. None of it was the work, and now none of it eats the day. Your attention goes back where it belongs. Next you give each department a named owner.</p>
+  </div>
+
+  <a class="next" href="team.html"><span>next</span><b>Module 10 · Team &rarr;</b> your AI employees. a named agent per department, with delegation and review.</a>
+
+  <footer>Module 09 · Admin. A living curriculum, one module at a time.</footer>
+
+</div>
+</body>
+</html>

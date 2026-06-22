@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Team · module 10</title>
+<style>
+  :root{
+    --bg:#0d0e11; --surface:#16181d; --surface2:#1d2026; --line:#2a2e36;
+    --text:#ece9e2; --muted:#9b9a93; --gold:#d4a04a; --teal:#1d9e75;
+    --radius:14px; --maxw:780px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .back{display:inline-block;color:var(--muted);font-size:14px;text-decoration:none;margin:32px 0 0}
+  .back:hover{color:var(--text)}
+  header{padding:18px 0 24px;border-bottom:1px solid var(--line)}
+  .kicker{color:var(--gold);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px}
+  h1{font-size:38px;font-weight:600;margin:0 0 12px;letter-spacing:-.01em}
+  .lede{color:var(--muted);font-size:18px;margin:0 0 18px}
+  .meta{display:flex;gap:14px;flex-wrap:wrap}
+  .chip{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;font-size:14px;color:var(--muted)}
+  .chip b{color:var(--text);font-weight:500}
+  .toc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin:24px 0}
+  .toc p{margin:0 0 8px;color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+  .toc ol{margin:0;padding-left:20px}
+  .toc li{margin:4px 0}
+  .toc a{color:var(--text);text-decoration:none}
+  .toc a:hover{color:var(--gold)}
+  .lesson{border-top:1px solid var(--line);padding:28px 0 4px}
+  .lnum{color:var(--gold);font-size:13px;font-weight:600}
+  .vid{color:var(--muted);font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;margin-left:8px}
+  h2{font-size:24px;font-weight:600;margin:6px 0 4px;letter-spacing:-.01em}
+  .out{color:var(--muted);font-size:15px;margin:0 0 14px}
+  h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:20px 0 8px}
+  p{font-size:16px;margin:0 0 12px}
+  ol,ul{font-size:16px;padding-left:22px;margin:0 0 12px}
+  li{margin:0 0 7px}
+  .blocks li b{color:var(--text)}
+  .quote{background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;margin:12px 0;font-size:15px;color:var(--text)}
+  .quote b{color:var(--gold)}
+  .dl{display:inline-block;background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:8px 13px;font-size:14px;color:var(--text);margin:2px 0}
+  .dl b{color:var(--gold)}
+  .done{background:var(--surface2);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:0 var(--radius) var(--radius) 0;padding:12px 16px;margin:14px 0;font-size:15px}
+  .key{color:var(--text);font-size:15px;margin:10px 0 4px}
+  .key b{color:var(--gold)}
+  .next{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin:30px 0;color:var(--text);text-decoration:none}
+  .next span{color:var(--muted);font-size:13px;display:block;margin-bottom:2px}
+  .next b{color:var(--gold);font-weight:600}
+  footer{padding:40px 0 70px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="index.html">&larr; back to the map</a>
+
+  <header>
+    <p class="kicker">module 10 · the departments</p>
+    <h1>Team</h1>
+    <p class="lede">Your AI employees. Every department you built can be run by a named agent. This is the runs-without-you layer. You stop doing the work and start reviewing it.</p>
+    <div class="meta">
+      <div class="chip"><b>Outcome</b> · a named agent per department, each one delegated to and reviewed like a hire, so the work runs and you manage</div>
+      <div class="chip"><b>One video per lesson</b></div>
+    </div>
+  </header>
+
+  <div class="toc">
+    <p>In this module</p>
+    <ol>
+      <li><a href="#l1">Define the roles</a></li>
+      <li><a href="#l2">Build the agents</a></li>
+      <li><a href="#l3">Delegate</a></li>
+      <li><a href="#l4">Review and improve</a></li>
+    </ol>
+  </div>
+
+  <div class="lesson" id="l1">
+    <p><span class="lnum">Lesson 10.1</span><span class="vid">video</span></p>
+    <h2>Define the roles</h2>
+    <p class="out">Outcome: one named agent per department, each with a written job description, before you build anything.</p>
+    <p>The departments are standing. Content attracts, Outreach prospects, Sales closes, Admin runs the day-to-day. Until now you have run each one by hand. The shift in this module is simple: every department gets a hire. Not a vague helper, a named agent with a real job.</p>
+    <p>So you do what a founder does before posting a role. You write the job description. A content lead who owns the Content engine. An outreach rep who owns the Instantly and GHL campaigns. A sales ops manager who keeps the pipeline clean in your CRM. Name them, give each one a mandate, a scope, and a hard line on what they never do without you.</p>
+    <h3>What each role holds</h3>
+    <ul class="blocks">
+      <li><b>The name.</b> Give the agent an identity so you can hand it work by name.</li>
+      <li><b>The department.</b> The one bucket it owns, and nothing outside it.</li>
+      <li><b>The mandate.</b> The outcome it is responsible for, in one line.</li>
+      <li><b>The guardrails.</b> What it does on its own, and what it must bring to you first.</li>
+    </ul>
+    <h3>Do this</h3>
+    <ol>
+      <li>List your departments. One agent per department, no overlap.</li>
+      <li>Write the job description for each, mandate and guardrails included.</li>
+      <li>Keep them short. A role is a paragraph, not a manual.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the agent role template</span>
+    <div class="done">Done when: every department has a named agent with a one-line mandate and a clear line it does not cross.</div>
+    <p class="key"><b>Key takeaway:</b> you cannot delegate a role you have not defined. Name the hire and write its job before you build it.</p>
+  </div>
+
+  <div class="lesson" id="l2">
+    <p><span class="lnum">Lesson 10.2</span><span class="vid">video</span></p>
+    <h2>Build the agents</h2>
+    <p class="out">Outcome: each role becomes a real agent, a skill plus memory plus tools, pointed at its department's brief.</p>
+    <p>A job description is not an employee. To make the agent real you give it three things, the same three you have been building all course. A <b>skill</b>, the repeatable workflow it runs. <b>Memory</b>, its department's brief and memory folder from Module 2. <b>Tools</b>, the connectors it actually touches: Instantly for the outreach rep, the CRM for sales ops, Supabase and the scraper for the content lead.</p>
+    <p>Point each agent at its room and it knows that room cold. The content lead reads the Content brief and runs the eight-seat engine. The outreach rep reads the Outreach brief and works the campaigns. Nothing generic. Each agent is the department brief plus the hands to act on it.</p>
+    <div class="quote"><b>Prompt:</b> Build me a content-lead agent. Read the Content department brief and memory folder as its context. Give it the content skills it needs and access to Supabase and the scraper. Write it as a Claude Code subagent scoped to the content bucket only.</div>
+    <h3>Do this</h3>
+    <ol>
+      <li>For each role, define it as a subagent in Claude Code.</li>
+      <li>Point it at its department brief and memory folder so it loads the right context.</li>
+      <li>Grant only the tools that department uses. No more.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the agent build kit</span>
+    <div class="done">Done when: you can call an agent by name and it already knows its department, its files, and its tools.</div>
+    <p class="key"><b>Key takeaway:</b> an agent is a skill, a memory, and a set of tools aimed at one room. Build it once, it knows that room every time.</p>
+  </div>
+
+  <div class="lesson" id="l3">
+    <p><span class="lnum">Lesson 10.3</span><span class="vid">video</span></p>
+    <h2>Delegate</h2>
+    <p class="out">Outcome: you hand a job to the right agent the way you would hand it to a hire, with the outcome and the guardrails up front.</p>
+    <p>Here is where the work leaves your hands. You do not do the task. You assign it. The skill is the same one you use with a real employee: be clear about the outcome, hand over the context, set the guardrails, then let them run.</p>
+    <p>A weak hand-off is "write some posts." A strong one names the outcome, the constraints, and the line for when to check back. The agent already carries the department context, so you are not re-explaining the business. You are giving a brief.</p>
+    <div class="quote"><b>Prompt:</b> Content lead, draft this week's five posts from the pipeline. Voice and banned words per the soul file. No claim without a receipt. Hold anything that needs a stat I have not confirmed, and bring me the drafts before anything ships.</div>
+    <h3>Do this</h3>
+    <ol>
+      <li>Pick a real job and hand it to the agent that owns that department.</li>
+      <li>State the outcome, the constraints, and where it must stop and check with you.</li>
+      <li>Let it work. Resist doing the task yourself.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the delegation prompt</span>
+    <div class="done">Done when: you assign a real job to an agent, give it the outcome and the guardrails, and it does the work.</div>
+    <p class="key"><b>Key takeaway:</b> delegate like a manager, not a doer. Outcome plus guardrails, then hands off the keyboard.</p>
+  </div>
+
+  <div class="lesson" id="l4">
+    <p><span class="lnum">Lesson 10.4</span><span class="vid">video</span></p>
+    <h2>Review and improve</h2>
+    <p class="out">Outcome: you become the manager. You check the output, give feedback, and the feedback gets written back into the agent's memory so it improves.</p>
+    <p>Delegation without review is just hope. The job is not done when the agent finishes, it is done when you have checked the work. So you put on the manager hat: read what came back, approve it or send it back, and say exactly what was off.</p>
+    <p>The part that makes this compound: the feedback does not die in the chat. You write it back into the agent's memory folder, the same folder from Module 2. "Always lead with the receipt." "Never use that closer." Next time, the agent already knows. The correction sticks, so you give it once, not every week.</p>
+    <p>Do that across every department and you have an org chart that runs itself. Agents do the work, you review and steer, and each agent gets sharper from your notes. You went from doing the business to managing it.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Review the agent's output. Approve it or send it back with a specific note.</li>
+      <li>Write the lesson into the agent's memory or brief, not just the chat.</li>
+      <li>Watch the same mistake not come back. That is the loop closing.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the review loop</span>
+    <div class="done">Done when: your feedback lives in the agent's memory and the next run is better because of it.</div>
+    <p class="key"><b>Key takeaway:</b> review is where the agent learns. Feedback in the chat is lost. Feedback in memory makes it improve.</p>
+  </div>
+
+  <div class="lesson" style="border-bottom:1px solid var(--line)">
+    <h3 style="color:var(--muted)">What you walk away with</h3>
+    <p>A team. Every department has a named agent that knows its room, the tools to act on it, and a memory that gets sharper every time you correct it. You hand out the work and review what comes back, the way a founder runs hires instead of doing every job. The business runs, and you manage. The one thing left is the guardrail around all of it: keeping the whole machine safe and honest.</p>
+  </div>
+
+  <a class="next" href="compliance.html"><span>next</span><b>Module 11 · Compliance &rarr;</b> keep it safe and honest. backups, data safety, the fact-gate, recovery.</a>
+
+  <footer>Module 10 · Team. A living curriculum, one module at a time.</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Finance · module 08</title>
+<style>
+  :root{
+    --bg:#0d0e11; --surface:#16181d; --surface2:#1d2026; --line:#2a2e36;
+    --text:#ece9e2; --muted:#9b9a93; --gold:#d4a04a; --teal:#1d9e75;
+    --radius:14px; --maxw:780px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .back{display:inline-block;color:var(--muted);font-size:14px;text-decoration:none;margin:32px 0 0}
+  .back:hover{color:var(--text)}
+  header{padding:18px 0 24px;border-bottom:1px solid var(--line)}
+  .kicker{color:var(--gold);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px}
+  h1{font-size:38px;font-weight:600;margin:0 0 12px;letter-spacing:-.01em}
+  .lede{color:var(--muted);font-size:18px;margin:0 0 18px}
+  .meta{display:flex;gap:14px;flex-wrap:wrap}
+  .chip{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;font-size:14px;color:var(--muted)}
+  .chip b{color:var(--text);font-weight:500}
+  .toc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin:24px 0}
+  .toc p{margin:0 0 8px;color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+  .toc ol{margin:0;padding-left:20px}
+  .toc li{margin:4px 0}
+  .toc a{color:var(--text);text-decoration:none}
+  .toc a:hover{color:var(--gold)}
+  .lesson{border-top:1px solid var(--line);padding:28px 0 4px}
+  .lnum{color:var(--gold);font-size:13px;font-weight:600}
+  .vid{color:var(--muted);font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;margin-left:8px}
+  h2{font-size:24px;font-weight:600;margin:6px 0 4px;letter-spacing:-.01em}
+  .out{color:var(--muted);font-size:15px;margin:0 0 14px}
+  h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:20px 0 8px}
+  p{font-size:16px;margin:0 0 12px}
+  ol,ul{font-size:16px;padding-left:22px;margin:0 0 12px}
+  li{margin:0 0 7px}
+  .blocks li b{color:var(--text)}
+  .quote{background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;margin:12px 0;font-size:15px;color:var(--text)}
+  .quote b{color:var(--gold)}
+  .dl{display:inline-block;background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:8px 13px;font-size:14px;color:var(--text);margin:2px 0}
+  .dl b{color:var(--gold)}
+  .done{background:var(--surface2);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:0 var(--radius) var(--radius) 0;padding:12px 16px;margin:14px 0;font-size:15px}
+  .key{color:var(--text);font-size:15px;margin:10px 0 4px}
+  .key b{color:var(--gold)}
+  .next{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin:30px 0;color:var(--text);text-decoration:none}
+  .next span{color:var(--muted);font-size:13px;display:block;margin-bottom:2px}
+  .next b{color:var(--gold);font-weight:600}
+  footer{padding:40px 0 70px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="index.html">&larr; back to the map</a>
+
+  <header>
+    <p class="kicker">module 08 · the departments</p>
+    <h1>Finance</h1>
+    <p class="lede">The money layer. Most owners cannot answer "did I make money last month" without a week of dread. This puts invoicing, the P&amp;L, and the numbers in one place the AI keeps current, so the answer is always one question away.</p>
+    <div class="meta">
+      <div class="chip"><b>Outcome</b> · invoices go out on their own, the books stay clean, and you can see your real number any day of the month</div>
+      <div class="chip"><b>One video per lesson</b></div>
+    </div>
+  </header>
+
+  <div class="toc">
+    <p>In this module</p>
+    <ol>
+      <li><a href="#l1">Invoicing on autopilot</a></li>
+      <li><a href="#l2">The P&amp;L</a></li>
+      <li><a href="#l3">Categorization</a></li>
+      <li><a href="#l4">Cashflow</a></li>
+    </ol>
+  </div>
+
+  <div class="lesson" id="l1">
+    <p><span class="lnum">Lesson 8.1</span><span class="vid">video</span></p>
+    <h2>Invoicing on autopilot</h2>
+    <p class="out">Outcome: the monthly retainer invoice generates, finalizes, sends, and archives itself, with a cover note drafted, from one command.</p>
+    <p>Invoicing is the chore that costs you money when you forget it. You did the work, the client owes you, and the only thing standing between you and the cash is a tedious form you keep putting off. So you hand it to the system.</p>
+    <p>The pattern is one skill that does not know about any single client. It reads a per-client config file, the amount, the line items, the email, then talks to Stripe to build the invoice, finalize it, send it, and file the record. A cover note draft lands in your email so you add the human touch before it goes. Add a client by writing one small config, not by rebuilding the skill.</p>
+    <div class="quote"><b>Command:</b> invoice acme for this month. Read the Acme config, draft the Stripe invoice and the cover note, show me both, and wait for my go before anything sends.</div>
+    <h3>Do this</h3>
+    <ol>
+      <li>Connect Stripe so Claude Code can create and send invoices.</li>
+      <li>Write one config per client: amount, line items, billing email.</li>
+      <li>Run the skill, review the invoice and cover note, then approve the send.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the stripe-invoice skill</span>
+    <div class="done">Done when: one command bills any client, and adding a client is a config file, not new code.</div>
+    <p class="key"><b>Key takeaway:</b> a client-agnostic skill plus a per-client config means you bill in seconds and never rebuild the machine.</p>
+  </div>
+
+  <div class="lesson" id="l2">
+    <p><span class="lnum">Lesson 8.2</span><span class="vid">video</span></p>
+    <h2>The P&amp;L</h2>
+    <p class="out">Outcome: income and expenses in one view that updates as money moves, so the monthly number is always one question away.</p>
+    <p>The P&amp;L is just income minus expenses over a stretch of time. The reason most owners dread it is that it lives in a shoebox of receipts and a bank app, and pulling the number means a night of reconciling. You fix that by giving it a home that stays current on its own.</p>
+    <p>Money lands in Notion. Income from your Stripe invoices, expenses from your bank feed, both in one Transactions database per year. On top of that sits a rollup that nets it out by month. You stop building the report. You ask for it.</p>
+    <div class="quote"><b>Prompt:</b> Read my Transactions for last month, total income and total expenses by category, and give me the net. Flag anything that looks off before you trust it.</div>
+    <h3>Do this</h3>
+    <ol>
+      <li>Set up the Transactions database in Notion with income and expense in one place.</li>
+      <li>Add the monthly rollup so the net calculates itself.</li>
+      <li>Ask Claude for last month's number and sanity-check it against your bank balance.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the P&amp;L setup</span>
+    <div class="done">Done when: you can ask "did I make money last month" and get an honest number in a minute, not a week.</div>
+    <p class="key"><b>Key takeaway:</b> the P&amp;L stops being a dreaded event when income and expenses share one view that stays current.</p>
+  </div>
+
+  <div class="lesson" id="l3">
+    <p><span class="lnum">Lesson 8.3</span><span class="vid">video</span></p>
+    <h2>Categorization</h2>
+    <p class="out">Outcome: transactions import on their own and get sorted, so the books stay clean without a bookkeeping night.</p>
+    <p>A P&amp;L is only as good as its categories. If every charge is an uncategorized blob, the net is true but useless, because you cannot see where the money actually goes. The old answer was to sit down once a month and tag every line by hand. The better answer is to let the import do it.</p>
+    <p>Finta.io auto-imports your transactions into Notion as they hit the bank. Then a set of rules does the first pass: this vendor is software, that one is contractors, this deposit is client income. The AI sorts the obvious ones by rule and surfaces only the handful it is unsure about. You confirm those, and the books are clean.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Connect Finta.io so transactions flow into your Notion Transactions database.</li>
+      <li>Write your categorization rules: the vendors you see every month and where each one belongs.</li>
+      <li>Run the sort, then review only the few it flags as uncertain.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the categorization rules</span>
+    <div class="done">Done when: new transactions land categorized, and you only touch the ones the rules could not call.</div>
+    <p class="key"><b>Key takeaway:</b> rules do the boring 90 percent, you do the judgment 10 percent. The bookkeeping night is gone.</p>
+  </div>
+
+  <div class="lesson" id="l4">
+    <p><span class="lnum">Lesson 8.4</span><span class="vid">video</span></p>
+    <h2>Cashflow</h2>
+    <p class="out">Outcome: one view of what came in, what is owed, and what is going out, so you see a gap before it is a problem.</p>
+    <p>Profit is a story about the past. Cashflow is whether you can pay your bills next week. A business can be profitable on paper and still run out of cash, because the money you earned has not arrived yet and the money you owe is due now. This view keeps the timing visible.</p>
+    <p>Three numbers in one place. What came in, from your bank feed. What is owed to you, from your open Stripe invoices. What is going out, your known upcoming costs. The AI lines them up on a calendar so you can see the week where the outflow lands before the inflow does, while there is still time to do something about it.</p>
+    <div class="quote"><b>Prompt:</b> From my bank feed, open invoices, and recurring costs, show me cash in versus cash out for the next 30 days. Tell me the day my balance gets tightest.</div>
+    <h3>Do this</h3>
+    <ol>
+      <li>Pull your open invoices from Stripe and your recurring costs into the view.</li>
+      <li>Lay the next 30 days out as cash in versus cash out.</li>
+      <li>Have Claude flag the tightest day and the invoices worth chasing early.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the cashflow view</span>
+    <div class="done">Done when: you can see a cash gap a few weeks out, while you still have time to close it.</div>
+    <p class="key"><b>Key takeaway:</b> profit tells you if it worked, cashflow tells you if you survive the month. Watch both.</p>
+  </div>
+
+  <div class="lesson" style="border-bottom:1px solid var(--line)">
+    <h3 style="color:var(--muted)">What you walk away with</h3>
+    <p>The money layer, standing on its own. Invoices go out from one command, transactions import and sort themselves, the P&amp;L stays current, and a cashflow view warns you before a gap turns into a scramble. The dread is gone, because the number is never more than a question away. Next you wire up the connective tissue that ties every department together.</p>
+  </div>
+
+  <a class="next" href="admin.html"><span>next</span><b>Module 09 · Admin &rarr;</b> the connective tissue. inbox, calendar, files, the day-to-day ops.</a>
+
+  <footer>Module 08 · Finance. A living curriculum, one module at a time.</footer>
+
+</div>
+</body>
+</html>

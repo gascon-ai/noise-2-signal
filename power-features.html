@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Power features · module 03</title>
+<style>
+  :root{
+    --bg:#0d0e11; --surface:#16181d; --surface2:#1d2026; --line:#2a2e36;
+    --text:#ece9e2; --muted:#9b9a93; --gold:#d4a04a; --teal:#1d9e75;
+    --radius:14px; --maxw:780px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .back{display:inline-block;color:var(--muted);font-size:14px;text-decoration:none;margin:32px 0 0}
+  .back:hover{color:var(--text)}
+  header{padding:18px 0 24px;border-bottom:1px solid var(--line)}
+  .kicker{color:var(--gold);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px}
+  h1{font-size:38px;font-weight:600;margin:0 0 12px;letter-spacing:-.01em}
+  .lede{color:var(--muted);font-size:18px;margin:0 0 18px}
+  .meta{display:flex;gap:14px;flex-wrap:wrap}
+  .chip{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;font-size:14px;color:var(--muted)}
+  .chip b{color:var(--text);font-weight:500}
+  .toc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin:24px 0}
+  .toc p{margin:0 0 8px;color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+  .toc ol{margin:0;padding-left:20px}
+  .toc li{margin:4px 0}
+  .toc a{color:var(--text);text-decoration:none}
+  .toc a:hover{color:var(--gold)}
+  .lesson{border-top:1px solid var(--line);padding:28px 0 4px}
+  .lnum{color:var(--gold);font-size:13px;font-weight:600}
+  .vid{color:var(--muted);font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;margin-left:8px}
+  h2{font-size:24px;font-weight:600;margin:6px 0 4px;letter-spacing:-.01em}
+  .out{color:var(--muted);font-size:15px;margin:0 0 14px}
+  h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:20px 0 8px}
+  p{font-size:16px;margin:0 0 12px}
+  ol,ul{font-size:16px;padding-left:22px;margin:0 0 12px}
+  li{margin:0 0 7px}
+  .blocks li b{color:var(--text)}
+  .quote{background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;margin:12px 0;font-size:15px;color:var(--text)}
+  .quote b{color:var(--gold)}
+  .dl{display:inline-block;background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:8px 13px;font-size:14px;color:var(--text);margin:2px 0}
+  .dl b{color:var(--gold)}
+  .done{background:var(--surface2);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:0 var(--radius) var(--radius) 0;padding:12px 16px;margin:14px 0;font-size:15px}
+  .key{color:var(--text);font-size:15px;margin:10px 0 4px}
+  .key b{color:var(--gold)}
+  .next{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin:30px 0;color:var(--text);text-decoration:none}
+  .next span{color:var(--muted);font-size:13px;display:block;margin-bottom:2px}
+  .next b{color:var(--gold);font-weight:600}
+  footer{padding:40px 0 70px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="index.html">&larr; back to the map</a>
+
+  <header>
+    <p class="kicker">module 03 · the stack</p>
+    <h1>Power features</h1>
+    <p class="lede">Foundation built the empty house. Second brain furnished it. Power features are the hands. These are the tools and agents that read your brain and do real work, then write back, so the system stops answering and starts doing.</p>
+    <div class="meta">
+      <div class="chip"><b>Outcome</b> · a system that reaches into your real accounts, runs packaged jobs, and fans work out to workers you can hand a task to</div>
+      <div class="chip"><b>One video per lesson</b></div>
+    </div>
+  </header>
+
+  <div class="toc">
+    <p>In this module</p>
+    <ol>
+      <li><a href="#l1">Skills</a></li>
+      <li><a href="#l2">MCP, connect your tools</a></li>
+      <li><a href="#l3">Subagents</a></li>
+      <li><a href="#l4">Hooks</a></li>
+      <li><a href="#l5">Plan mode and the command library</a></li>
+      <li><a href="#l6">Agents as AI employees</a></li>
+    </ol>
+  </div>
+
+  <div class="lesson" id="l1">
+    <p><span class="lnum">Lesson 3.1</span><span class="vid">video</span></p>
+    <h2>Skills</h2>
+    <p class="out">Outcome: a packaged, repeatable job the AI runs the same way every time, and the ability to build your own.</p>
+    <p>A skill is a job written down once so it never has to be re-explained. Instead of typing the same long prompt every time you want a cold email or a renewal pack, you teach the system the steps, the rules, and the files it needs. Then you call it by name and it runs.</p>
+    <p>This is the genius with amnesia getting muscle memory. The brain stays the same, but now it knows how to do specific things on command, the way you would do them.</p>
+    <p>You install skills people have already built, and you build your own. The build is easy, because there is a skill that writes skills.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Install one skill and run it, so you feel the call-by-name move.</li>
+      <li>Take a job you do the same way every week and write down the steps.</li>
+      <li>Hand those steps to the skill-creator and let it package the skill for you.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the skill-creator</span>
+    <div class="done">Done when: you have one skill you built running a real, repeatable job in your business.</div>
+    <p class="key"><b>Key takeaway:</b> a skill turns a long prompt into a one-word command. Receipt: 35 skills already run this business, from cold email to client renewals.</p>
+  </div>
+
+  <div class="lesson" id="l2">
+    <p><span class="lnum">Lesson 3.2</span><span class="vid">video</span></p>
+    <h2>MCP, connect your tools</h2>
+    <p class="out">Outcome: the genius gets hands in your real accounts, not just a chat window.</p>
+    <p>Skills tell the AI how to do a job. MCP gives it the place to do it. MCP, the Model Context Protocol, is the standard plug that lets Claude reach your actual tools and act in them: Notion, Slack, Gmail, Calendar, Stripe, Apify, your CRM.</p>
+    <p>Before this, the AI could write you a perfect Slack message. After this, it posts it. It reads the Notion board, pulls the Stripe invoice, checks the Calendar, scrapes with Apify, all in your real accounts, with your data. The amnesiac genius finally has hands on the controls.</p>
+    <p>You connect one tool at a time, and you only connect what you use. Each one is a new thing the system can touch.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>List the tools you live in. Notion, Slack, Gmail, Calendar, Stripe, your CRM.</li>
+      <li>Connect one, the one you touch most, and confirm it reads your real data.</li>
+      <li>Add the rest over time, one per session, never all at once.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the MCP connect checklist</span>
+    <div class="done">Done when: Claude reads and acts in at least one of your real accounts, not a copy you pasted in.</div>
+    <p class="key"><b>Key takeaway:</b> skills are how it works, MCP is where it works. Together the brain gets hands.</p>
+  </div>
+
+  <div class="lesson" id="l3">
+    <p><span class="lnum">Lesson 3.3</span><span class="vid">video</span></p>
+    <h2>Subagents</h2>
+    <p class="out">Outcome: one task fans out to parallel workers, so no single window gets clogged.</p>
+    <p>Remember the one rule: one task, one window. A subagent is how you keep that rule while doing more at once. Instead of cramming five jobs into one chat until it loses the thread, you fan the work out. Each subagent gets its own clean context, does its piece, and returns only the answer.</p>
+    <p>Say you want five competitors researched. One window doing all five gets muddy and slow. Five subagents, one per competitor, each comes back with just its findings. Your main window stays clean and collects the results.</p>
+    <p>This is the difference between a smart assistant and a small team. You stay the one giving the orders.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Find a task that splits cleanly into parts, like research across several targets.</li>
+      <li>Use the fan-out prompt to send one subagent per part.</li>
+      <li>Read the answers they return, not the work they did to get there.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the subagent fan-out prompt</span>
+    <div class="done">Done when: a job that would have clogged one window comes back as clean answers from several workers.</div>
+    <p class="key"><b>Key takeaway:</b> subagents let one task become many, each in its own clean context, so you scale without losing the thread.</p>
+  </div>
+
+  <div class="lesson" id="l4">
+    <p><span class="lnum">Lesson 3.4</span><span class="vid">video</span></p>
+    <h2>Hooks</h2>
+    <p class="out">Outcome: code that fires automatically around a session, so the system does work you never have to remember.</p>
+    <p>A hook is a small piece of code that runs on its own at a set moment: when a session starts, when you run a command, when a session ends. You set it once and it fires every time, no prompting, no clicking.</p>
+    <p>Here is the real receipt. A Stop hook runs the moment any session ends. After every session, it syncs the whole Claude setup, the skills and the memory, to a private GitHub repo. The work backs itself up with zero effort. You never think about it, and you never lose it.</p>
+    <p>That is the shape of a good hook. A chore you would forget, handed to a trigger that never forgets.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Pick a chore that should happen every time, like backing up your setup.</li>
+      <li>Install the auto-backup hook on session end and point it at a private repo.</li>
+      <li>End a session and confirm the backup landed without you touching anything.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the auto-backup hook</span>
+    <div class="done">Done when: your skills and memory back themselves up to GitHub every time a session ends, untouched.</div>
+    <p class="key"><b>Key takeaway:</b> hooks turn a chore into a reflex. Set it once, it fires forever.</p>
+  </div>
+
+  <div class="lesson" id="l5">
+    <p><span class="lnum">Lesson 3.5</span><span class="vid">video</span></p>
+    <h2>Plan mode and the command library</h2>
+    <p class="out">Outcome: the system shows its plan before it touches anything, and your best prompts live as one-word commands.</p>
+    <p>Two habits that keep a powerful system safe and fast.</p>
+    <p>Plan mode makes it think before it acts. It reads, it lays out exactly what it intends to do, and it waits for your yes before changing a single file. You catch the wrong turn while it is still just words. On anything that touches real work, plan first, then run.</p>
+    <p>The command library is where your best prompts retire. Any prompt you find yourself typing twice becomes a slash command. The handoff, the research fan-out, the weekly report, saved by name and called in one word. It pairs with the one rule: one task, one window, one command to start it clean.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Turn on plan mode and make it show the plan before any real change.</li>
+      <li>Find a prompt you reuse and save it as a slash command.</li>
+      <li>Load the starter library so you begin with a shelf of commands, not an empty one.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the starter command library</span>
+    <div class="done">Done when: it plans before it touches your work, and your top prompts run as one-word commands.</div>
+    <p class="key"><b>Key takeaway:</b> plan mode is the brake, the command library is the gas. One task, one window, one command.</p>
+  </div>
+
+  <div class="lesson" id="l6">
+    <p><span class="lnum">Lesson 3.6</span><span class="vid">video</span></p>
+    <h2>Agents as AI employees</h2>
+    <p class="out">Outcome: the pieces from this module combine into a worker you can hand a whole job to.</p>
+    <p>Here is where it all comes together. A skill is how to do a job. Memory is who you are and what the job is about. MCP is the hands in your real tools. Stack those three and you get an agent: a worker you can hand a job to and trust to come back with it done.</p>
+    <p>An AI employee is not a chatbot. It has a role, it knows your business from memory, it runs its job as a skill, and it acts in your accounts through MCP. You delegate the outcome, not the steps.</p>
+    <p>This is the bridge out of the stack. You have built the house, furnished it, and given it hands. Next you stand up the business, one function at a time, and these workers become your departments: content, outreach, sales, client success, finance.</p>
+    <h3>Do this</h3>
+    <ol>
+      <li>Pick one job in your business you would hand to a hire.</li>
+      <li>Give a worker its three pieces: a skill, the memory it needs, the tools it acts in.</li>
+      <li>Hand it the outcome and check the result, not the steps.</li>
+    </ol>
+    <span class="dl"><b>Download</b> · the AI employee blueprint</span>
+    <div class="done">Done when: one agent owns a real job end to end, and you judge it by the result.</div>
+    <p class="key"><b>Key takeaway:</b> skill plus memory plus tools equals an employee. This is the bridge: next, these become your departments.</p>
+  </div>
+
+  <div class="lesson" style="border-bottom:1px solid var(--line)">
+    <h3 style="color:var(--muted)">What you walk away with</h3>
+    <p>Hands on the house. The system runs packaged jobs as skills, reaches into your real accounts through MCP, fans big work out to subagents, and handles chores automatically through hooks, all while plan mode keeps it honest and your command library keeps it fast. Stack a skill, memory, and tools, and you have an AI employee you can hand a job to. The stack is built. Next you stand up the business on top of it, one department at a time.</p>
+  </div>
+
+  <a class="next" href="content.html"><span>next</span><b>Module 04 · Content &rarr;</b> attract, inbound. the eight-seat content engine, plus design.</a>
+
+  <footer>Module 03 · Power features. A living curriculum, one module at a time.</footer>
+
+</div>
+</body>
+</html>
